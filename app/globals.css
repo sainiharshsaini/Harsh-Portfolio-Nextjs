@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+/* * {
+    font-family: Outfit;
+} */
+
+@theme {
+    --font-Outfit: "Outfit", "sans-serif";
+    --font-Ovo: "Ovo", "serif";
+    --color-lightHover: #fcf4ff;
+    --color-darkHover: #2a004a;
+    --color-darkTheme: #11001F;
+    --shadow-black: 4px 4px 0 #000;
+    --shadow-white: 4px 4px 0 #fff;
+}
+
+/* .grid-cols-auto {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+} */
+
+@layer utilities{
+    .grid-cols-auto {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+
+/* for light and dark theme */
+@custom-variant dark (&:where(.dark, .dark *));
