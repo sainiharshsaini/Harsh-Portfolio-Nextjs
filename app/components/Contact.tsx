@@ -34,27 +34,27 @@ const Contact = () => {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 1 }}
-            id="contact" className="w-full px-[12%] py-10 scroll-mt-20 bg-[url('/footer-bg-color.png')] bg-no-repeat bg-center bg-[length: 90%_auto] dark:bg-none">
-            <motion.h4
+            id="contact" className="w-full px-[10%] scroll-mt-20 bg-[url('/footer-bg-color.png')] bg-no-repeat bg-center bg-[length: 90%_auto] dark:bg-none">
+            {/* <motion.h4
                 initial={{ y: -20, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.5, delay: 0.3 }}
                 className="text-center mb-2 text-lg font-Ovo">
-                Connect with me
-            </motion.h4>
+                Get in touch
+            </motion.h4> */}
             <motion.h2
                 initial={{ y: -20, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.5, delay: 0.5 }}
                 className="text-center text-5xl font-Ovo">
-                Get in touch
+                Let&apos;s Connect
             </motion.h2>
             <motion.p
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 0.5, delay: 0.7 }}
-                className="text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo">
-                I&apos;d love to hear from you! If you have any questions, comments,  or feedback, please use the form below.
+                className="text-center max-w-2xl mx-auto mt-10 mb-12 font-Ovo">
+                I&apos;m always open to discussing web development work, collaboration opportunities, or just talking tech. <br /> Drop me a message and let's build something great together!
             </motion.p>
 
             <motion.form

@@ -27,7 +27,8 @@ const Services = () => {
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 0.5, delay: 0.7 }}
                 className="text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo">
-                I am a Full Stact Developer from California, USA with 2 months of experience in multiple companies like microsoft, Tesla and Apple.
+                I develop end-to-end web solutions that are fast, reliable, and user-focused.
+                From frontend interfaces to backend logic and cloud deployment — I handle it all.
             </motion.p>
 
             <motion.div
@@ -39,7 +40,7 @@ const Services = () => {
                     <motion.div
                         whileHover={{ scale: 1.05 }}
                         key={index} className="border border-gray-400 rounded-lg px-8 py-12 hover:shadow-black cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 dark:hover:bg-darkHover dark:hover:shadow-white">
-                        <Image src={icon} alt="" className="w-10" />
+                        <Image src={icon} alt="" className="w-12" />
                         <h3 className="text-lg my-4 text-gray-700 dark:text-white">{title}</h3>
                         <p className="text-sm text-gray-600 leading-5 dark:text-white/80">
                             {description}

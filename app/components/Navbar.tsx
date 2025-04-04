@@ -51,7 +51,6 @@ const Navbar = ({ isDarkMode, setIsDarkMode }: navbarPropsType) => {
                     <li><Link className='font-Ovo' href="#top">Home</Link></li>
                     <li><Link className='font-Ovo' href="#about">About me</Link></li>
                     <li><Link className='font-Ovo' href="#services">Services</Link></li>
-                    <li><Link className='font-Ovo' href="#services">Services</Link></li>
                     <li><Link className='font-Ovo' href="#work">My Work</Link></li>
                     <li><Link className='font-Ovo' href="#contact">Contact me</Link></li>
                 </ul>
@@ -74,7 +73,6 @@ const Navbar = ({ isDarkMode, setIsDarkMode }: navbarPropsType) => {
                     </div>
                     <li><Link className='font-Ovo' onClick={closeMenu} href="#top">Home</Link></li>
                     <li><Link className='font-Ovo' onClick={closeMenu} href="#about">About me</Link></li>
-                    <li><Link className='font-Ovo' onClick={closeMenu} href="#services">Services</Link></li>
                     <li><Link className='font-Ovo' onClick={closeMenu} href="#services">Services</Link></li>
                     <li><Link className='font-Ovo' onClick={closeMenu} href="#work">My Work</Link></li>
                     <li><Link className='font-Ovo' onClick={closeMenu} href="#contact">Contact me</Link></li>
