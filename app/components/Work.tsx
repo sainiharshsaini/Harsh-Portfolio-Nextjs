@@ -45,7 +45,7 @@ const Work = ({ isDarkMode }: workPropsType) => {
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 0.6, delay: 0.9 }}
                 className="grid grid-cols-auto my-10 gap-5 ">
-                {projectsData.map(({ title, description, bgImage, techUsed, liveLink, githubLink }, index) => (
+                {projectsData.map(({ title, description, bgImage, liveLink, githubLink }, index) => (
                     <motion.div
                         whileHover={{ scale: 1.05 }}
                         transition={{ duration: 0.3 }}

@@ -1,15 +1,15 @@
 import { assets } from "@/assets/assets"
 import Image from "next/image"
-import { useState } from "react";
+import { FormEvent, useState } from "react";
 import { motion } from "motion/react"
 
 const Contact = () => {
     const [result, setResult] = useState<string>("");
 
-    const onSubmit = async (event) => {
+    const onSubmit = async (event: FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         setResult("Sending....");
-        const formData = new FormData(event.target);
+        const formData = new FormData(event.currentTarget);
 
         formData.append("access_key", "0e47333c-c3a5-4474-b384-00e5269ef54f");
 
@@ -22,7 +22,7 @@ const Contact = () => {
 
         if (data.success) {
             setResult("Form Submitted Successfully");
-            event.target.reset();
+            event.currentTarget.reset();
         } else {
             console.log("Error", data);
             setResult(data.message);
@@ -35,13 +35,13 @@ const Contact = () => {
             whileInView={{ opacity: 1 }}
             transition={{ duration: 1 }}
             id="contact" className="w-full px-[10%] scroll-mt-20 bg-[url('/footer-bg-color.png')] bg-no-repeat bg-center bg-[length: 90%_auto] dark:bg-none">
-            {/* <motion.h4
+            <motion.h4
                 initial={{ y: -20, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.5, delay: 0.3 }}
                 className="text-center mb-2 text-lg font-Ovo">
                 Get in touch
-            </motion.h4> */}
+            </motion.h4>
             <motion.h2
                 initial={{ y: -20, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
@@ -54,7 +54,7 @@ const Contact = () => {
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 0.5, delay: 0.7 }}
                 className="text-center max-w-2xl mx-auto mt-10 mb-12 font-Ovo">
-                I&apos;m always open to discussing web development work, collaboration opportunities, or just talking tech. <br /> Drop me a message and let's build something great together!
+                I&apos;m always open to discussing web development work, collaboration opportunities, or just talking tech. <br /> Drop me a message and let&apos;s build something great together!
             </motion.p>
 
             <motion.form
@@ -78,7 +78,7 @@ const Contact = () => {
                     initial={{ y: 100, opacity: 0 }}
                     whileInView={{ y: 0, opacity: 1 }}
                     transition={{ duration: 0.6, delay: 1.3 }}
-                    rows="6" placeholder="Enter your message" name="message" required className="w-full p-4 outline-none border-[0.5px] border-gray-400 rounded-md bg-white mb-6 dark:bg-darkHover/30 dark:border-white/90">
+                    rows={6} placeholder="Enter your message" name="message" required className="w-full p-4 outline-none border-[0.5px] border-gray-400 rounded-md bg-white mb-6 dark:bg-darkHover/30 dark:border-white/90">
                 </motion.textarea>
                 <motion.button
                     whileHover={{ scale: 1.05 }}
