@@ -1,6 +1,6 @@
 import { motion } from 'motion/react'
 import Image from 'next/image'
-import { techStackData } from '@/assets/tech-stack'
+import { techStackData } from '@/assets/tech-stack-icons/tech-stack'
 
 const TechStack = () => {
     return (

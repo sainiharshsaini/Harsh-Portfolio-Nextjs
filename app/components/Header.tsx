@@ -5,14 +5,14 @@ import { motion } from "motion/react"
 
 const Header = () => {
     return (
-        <div className="w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4">
+        <div className="w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-3 md:gap-5">
             <motion.div
                 initial={{ scale: 0 }}
                 whileInView={{ scale: 1 }}
                 transition={{ duration: 0.8, type: 'spring', stiffness: 100 }}
-                className="mt-30"
+                className="mt-40"
             >
-                <Image src={assets.profile_img} alt="profileImg" className="rounded-full w-32" />
+                <Image src={assets.profile_img} alt="profileImg" className="rounded-full w-24 md:w-32" />
             </motion.div>
             <motion.h3
                 initial={{ y: -20, opacity: 0 }}
@@ -40,7 +40,7 @@ const Header = () => {
                 initial={{ y: -20, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
-                className="flex items-center gap-2 font-semibold"
+                className="flex items-center gap-1 font-serif text-sm"
             >
                 <Image src={assets.activeIcon} alt="active" width={20} height={20} />
                 Open to full-time opportunities | Remote or On-site
@@ -50,7 +50,7 @@ const Header = () => {
                     initial={{ y: 30, opacity: 0 }}
                     whileInView={{ y: 0, opacity: 1 }}
                     transition={{ duration: 0.6, delay: 1 }}>
-                    <Link href="#contact" className="px-10 py-3 border border-white rounded-full bg-black text-white flex items-center gap-2 dark:bg-transparent">
+                    <Link href="#contact" className="px-10 py-3 border border-white rounded-full bg-black text-white flex items-center gap-2 dark:bg-transparent hover:bg-darkHover">
                         Contact me
                         <Image src={assets.right_arrow_white} alt="" className="w-4" />
                     </Link>
@@ -60,7 +60,7 @@ const Header = () => {
                     whileInView={{ y: 0, opacity: 1 }}
                     transition={{ duration: 0.6, delay: 1.2 }}
                 >
-                    <Link href="/sample-resume.pdf" download className="px-10 py-3 border rounded-full border-gray-500 flex items-center gap-2 bg-white dark:text-black">
+                    <Link href="/sample-resume.pdf" download className="px-10 py-3 border rounded-full border-gray-500 flex items-center gap-2 bg-white dark:text-black hover:bg-lightHover">
                         My Resume
                         <Image src={assets.download_icon} alt="" className="w-4" />
                     </Link>

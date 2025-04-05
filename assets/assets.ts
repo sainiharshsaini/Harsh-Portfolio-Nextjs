@@ -6,8 +6,8 @@ import edu_icon_dark from './edu-icon-dark.png';
 import project_icon from './project-icon.png';
 import project_icon_dark from './project-icon-dark.png';
 import right_arrow_white from './right-arrow-white.png';
-import logo from './logo.png';
-import logo_dark from './logo_dark.png';
+import logo from './logo.jpg';
+import logo_dark from './logo-dark.jpg';
 import mail_icon from './mail_icon.png';
 import mail_icon_dark from './mail_icon_dark.png';
 import profile_img from './profile-img.png';
@@ -35,14 +35,14 @@ import github_light from './github-light.svg'
 import github_dark from './github-dark.svg'
 import web_dev from './web-dev.png'
 import devOps from './devOps.png'
-import hello from './hello.png'
 import activeIcon from './circle.png'
 import india from './india.png'
+import live from './live.png'
 
 export const assets = {
+    live,
     india,
     activeIcon,
-    hello,
     web_dev,
     devOps,
     github_light,
@@ -81,29 +81,6 @@ export const assets = {
     right_arrow_bold,
     right_arrow_bold_dark
 };
-
-export const workData = [
-    {
-        title: 'Frontend project',
-        description: 'Web Design',
-        bgImage: '/work-1.png',
-    },
-    {
-        title: 'Geo based app',
-        description: 'Mobile App',
-        bgImage: '/work-2.png',
-    },
-    {
-        title: 'Photography site',
-        description: 'Web Design',
-        bgImage: '/work-3.png',
-    },
-    {
-        title: 'UI/UX designing',
-        description: 'UI/UX Design',
-        bgImage: '/work-4.png',
-    },
-]
 
 export const serviceData = [
     { icon: assets.web_dev, title: 'Web development', description: 'I craft scalable full-stack web apps using modern frameworks like React, Next.js, etc. From frontend design to backend logic, I turn ideas into fully functional products...', link: '' },
