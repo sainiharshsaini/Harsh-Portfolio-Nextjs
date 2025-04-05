@@ -23,17 +23,17 @@ const Footer = ({ isDarkMode }: footerPropsType) => {
                 <ul className="flex items-center gap-6 justify-center mt-4 sm:mt-0">
                     <li>
                         <Link target="_blank" href="https://github.com/sainiharshsaini">
-                        <Image width={25} height={25} src={isDarkMode ? assets.github_light : assets.github_dark} alt="github"></Image>
+                        <Image width={20} height={20} src={isDarkMode ? assets.github_light : assets.github_dark} alt="github"></Image>
                         </Link>
                     </li>
                     <li>
                         <Link target="_blank" href="https://www.linkedin.com/in/harsh-saini-158709238">
-                        <Image width={25} height={25} src={isDarkMode ? assets.linked_light : assets.linkedin_dark} alt="linkedin"></Image>
+                        <Image width={20} height={20} src={isDarkMode ? assets.linked_light : assets.linkedin_dark} alt="linkedin"></Image>
                         </Link>
                     </li>
                     <li>
                         <Link target="_blank" href="https://x.com/harshsaini_18?t=_zx6F5EH11KJBifgNn7TxA&s=09">
-                        <Image width={25} height={25} src={isDarkMode ? assets.twitter_light : assets.twitter_dark} alt="twitter"></Image>
+                        <Image width={20} height={20} src={isDarkMode ? assets.twitter_light : assets.twitter_dark} alt="twitter"></Image>
                         </Link>
                     </li>
                 </ul>

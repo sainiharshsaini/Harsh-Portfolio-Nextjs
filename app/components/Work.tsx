@@ -15,7 +15,7 @@ const Work = ({ isDarkMode }: workPropsType) => {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 1 }}
-            id="work" className="w-full px-[12%] py-10 scroll-mt-20">
+            id="work" className="w-full px-[10%] py-10 scroll-mt-20">
             <motion.h4
                 initial={{ y: -20, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
@@ -44,17 +44,17 @@ const Work = ({ isDarkMode }: workPropsType) => {
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 0.6, delay: 0.9 }}
-                className="grid grid-cols-auto my-10 gap-5 ">
+                className="grid grid-cols-auto my-10 gap-8 ">
                 {projectsData.map(({ title, description, bgImage, liveLink, githubLink }, index) => (
                     <motion.div
                         whileHover={{ scale: 1.05 }}
                         transition={{ duration: 0.3 }}
                         className="border-gray-400 rounded-lg relative cursor-pointer border overflow-hidden" key={index}
                     >
-                        <Image src={bgImage} alt="projectsImg"  />
+                        <Image src={bgImage} alt="projectsImg" className="p-2" />
                         <div className="bg-transparent rounded-md py-3 px-5 flex items-center flex-col justify-between gap-6">
                             <div>
-                                <h2 className="font-semibold">{title}</h2>
+                                <h2 className="font-semibold pb-1">{title}</h2>
                                 <p className="text-sm text-gray-700 dark:text-gray-300">{description}</p>
                             </div>
                             {/* <div className="w-full flex items-center justify-start gap-2 flex-wrap">
@@ -63,11 +63,11 @@ const Work = ({ isDarkMode }: workPropsType) => {
                                 ))}
                             </div> */}
                             <div className="flex items-center justify-end w-full gap-1">
-                                <Link target="_blank" href={githubLink} className="flex text-center text-sm gap-1 rounded-full py-1.5 px-4 border-gray-400 hover:bg-lightHover  dark:hover:bg-darkHover">
+                                <Link target="_blank" href={githubLink} className="flex text-center text-sm gap-1 rounded py-1.5 px-4 border-gray-400 hover:bg-lightHover  dark:hover:bg-darkHover">
                                     <Image src={isDarkMode ? assets.github_light : assets.github_dark} alt="send icon" className="w-4" />
                                     <p>Github</p>
                                 </Link>
-                                <Link target="_blank" href={liveLink} className="flex items-center text-sm gap-1 rounded-full py-1.5 px-4 border-gray-400 hover:bg-lightHover  dark:hover:bg-darkHover">
+                                <Link target="_blank" href={liveLink} className="flex items-center text-sm gap-1 rounded py-1.5 px-4 border-gray-400 hover:bg-lightHover  dark:hover:bg-darkHover">
                                     <Image src={assets.live} alt="send icon" className="w-5" />
                                     <p>Live</p>
                                 </Link>

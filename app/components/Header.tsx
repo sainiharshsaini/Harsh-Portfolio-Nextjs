@@ -5,14 +5,14 @@ import { motion } from "motion/react"
 
 const Header = () => {
     return (
-        <div className="w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-3 md:gap-5">
+        <div className="w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4 md:gap-5">
             <motion.div
                 initial={{ scale: 0 }}
                 whileInView={{ scale: 1 }}
                 transition={{ duration: 0.8, type: 'spring', stiffness: 100 }}
-                className="mt-40"
+                className="mt-10 md:mt-30"
             >
-                <Image src={assets.profile_img} alt="profileImg" className="rounded-full w-24 md:w-32" />
+                <Image src={assets.profile_img} alt="profileImg" className="rounded-full w-28 md:w-32" />
             </motion.div>
             <motion.h3
                 initial={{ y: -20, opacity: 0 }}
@@ -36,15 +36,15 @@ const Header = () => {
                 className="max-w-2xl mx-auto font-Ovo">
                 I build fast, scalable, and modern web applications using the MERN stack & Next.js. Passionate about creating intuitive user experiences and clean backend architectures.
             </motion.p>
-            <motion.h2
+            <motion.div
                 initial={{ y: -20, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
-                className="flex items-center gap-1 font-serif text-sm"
+                className="flex items-center text-center gap-1 font-serif text-sm"
             >
                 <Image src={assets.activeIcon} alt="active" width={20} height={20} />
                 Open to full-time opportunities | Remote or On-site
-            </motion.h2>
+            </motion.div>
             <div className="flex flex-col sm:flex-row items-center gap-4 mt-4">
                 <motion.div
                     initial={{ y: 30, opacity: 0 }}
