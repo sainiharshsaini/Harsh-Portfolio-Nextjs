@@ -28,7 +28,7 @@ const Header = () => {
                 className="text-3xl sm:text-6xl lg:text-[66px] font-Ovo">
                 full stack web developer based in India.
             </motion.h1>
-            <Image src={assets.india} className="w-8" alt="india"/>
+            <Image src={assets.india} className="w-8" alt="india" />
             <motion.p
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
@@ -60,9 +60,9 @@ const Header = () => {
                     whileInView={{ y: 0, opacity: 1 }}
                     transition={{ duration: 0.6, delay: 1.2 }}
                 >
-                    <Link href="/sample-resume.pdf" download className="px-10 py-3 border rounded-full border-gray-500 flex items-center gap-2 bg-white dark:text-black hover:bg-lightHover">
+                    <Link target="_blank" href="/HarshResume.jpg" download="HarshOldResume.jpg" className="px-10 py-3 border rounded-full border-gray-500 flex items-center gap-2 bg-white dark:text-black hover:bg-lightHover">
                         My Resume
-                        <Image src={assets.download_icon} alt="" className="w-4" />
+                        <Image src={assets.download_icon} alt="resume" className="w-4" />
                     </Link>
                 </motion.div>
             </div>

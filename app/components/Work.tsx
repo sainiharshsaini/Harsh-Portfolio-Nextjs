@@ -49,25 +49,25 @@ const Work = ({ isDarkMode }: workPropsType) => {
                     <motion.div
                         whileHover={{ scale: 1.05 }}
                         transition={{ duration: 0.3 }}
-                        className="border-gray-400 rounded-lg hover:shadow-black dark:hover:shadow-white relative cursor-pointer border overflow-hidden" key={index}
+                        className="border-gray-400 rounded-lg relative cursor-pointer border overflow-hidden" key={index}
                     >
-                        <Image src={bgImage} alt="projectsImg" className="p-2" />
+                        <Image src={bgImage} alt="projectsImg"  />
                         <div className="bg-transparent rounded-md py-3 px-5 flex items-center flex-col justify-between gap-6">
                             <div>
                                 <h2 className="font-semibold">{title}</h2>
                                 <p className="text-sm text-gray-700 dark:text-gray-300">{description}</p>
                             </div>
-                            <div className="w-full flex items-center justify-start gap-2 flex-wrap">
+                            {/* <div className="w-full flex items-center justify-start gap-2 flex-wrap">
                                 {techUsed.map(({ icon }, index) => (
                                     <Image key={index} src={icon} alt="techused" className="w-6" />
                                 ))}
-                            </div>
-                            <div className="flex items-center justify-between w-full gap-2">
-                                <Link target="_blank" href={githubLink} className="flex text-center text-sm gap-1 border rounded-full py-1 px-3 border-gray-400 hover:bg-lightHover  dark:hover:bg-darkHover">
+                            </div> */}
+                            <div className="flex items-center justify-end w-full gap-1">
+                                <Link target="_blank" href={githubLink} className="flex text-center text-sm gap-1 rounded-full py-1.5 px-4 border-gray-400 hover:bg-lightHover  dark:hover:bg-darkHover">
                                     <Image src={isDarkMode ? assets.github_light : assets.github_dark} alt="send icon" className="w-4" />
                                     <p>Github</p>
                                 </Link>
-                                <Link target="_blank" href={liveLink} className="flex items-center text-sm gap-1 border rounded-full py-1 px-4 border-gray-400 hover:bg-lightHover  dark:hover:bg-darkHover">
+                                <Link target="_blank" href={liveLink} className="flex items-center text-sm gap-1 rounded-full py-1.5 px-4 border-gray-400 hover:bg-lightHover  dark:hover:bg-darkHover">
                                     <Image src={assets.live} alt="send icon" className="w-5" />
                                     <p>Live</p>
                                 </Link>
