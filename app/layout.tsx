@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   title: "Harsh - Portfolio",
   description: "Harsh Portfolio using Nextjs",
   icons: {
-    icon: 'https://static.toiimg.com/thumb/msid-53891743,width-748,height-499,resizemode=4,imgsize-152022/Tour-Eiffel.jpg'
+    icon: '/profile-img.png'
   }
 };
 
