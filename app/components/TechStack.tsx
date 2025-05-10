@@ -7,19 +7,19 @@ const TechStack = () => {
         <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            transition={{ duration: 1 }}
+            transition={{ duration: 0.9 }}
             id="about" className="w-full px-[10%] py-10 scroll-mt-20">
             <motion.h4
                 initial={{ y: -20, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.5, delay: 0.3 }}
+                transition={{ duration: 0.4, delay: 0.2 }}
                 className="text-center mb-2 text-lg font-Ovo">
                 My Tech Stack
             </motion.h4>
             <motion.h2
                 initial={{ y: -20, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.5, delay: 0.5 }}
+                transition={{ duration: 0.4, delay: 0.4 }}
                 className="text-center text-5xl font-Ovo">
                 Behind the Magic
             </motion.h2>
@@ -28,13 +28,13 @@ const TechStack = () => {
                     <motion.h4
                         initial={{ y: 20, opacity: 0 }}
                         whileInView={{ y: 0, opacity: 1 }}
-                        transition={{ duration: 0.5, delay: 1.3 }}
+                        transition={{ duration: 0.4, delay: 1.2 }}
                         className="my-6 text-gray-700 font-Ovo dark:text-white/80"
                     >{techType}</motion.h4>
                     <motion.ul
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
-                        transition={{ duration: 0.6, delay: 1.5 }}
+                        transition={{ duration: 0.5, delay: 1.4 }}
                         className="flex gap-3 sm:gap-5 flex-wrap">
                         {techData.map(({ imgName, imgLink }, index) => (
                             <motion.li
