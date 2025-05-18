@@ -5,21 +5,13 @@ import { motion } from "motion/react"
 
 const Header = () => {
     return (
-        <div className="w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4 md:gap-5">
-            <motion.div
-                initial={{ scale: 0 }}
-                whileInView={{ scale: 1 }}
-                transition={{ duration: 0.8, type: 'spring', stiffness: 100 }}
-                className="mt-10 md:mt-30"
-            >
-                <Image src={assets.profile_img} alt="profileImg" className="rounded-full w-28 md:w-32" />
-            </motion.div>
+        <div className="w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-6">
             <motion.h3
                 initial={{ y: -20, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
-                className="flex items-end gap-2 text-xl md:text-2xl mb-3 font-Ovo">
-                Hi! I&apos;m Harsh Saini
+                className="flex items-end gap-2 text-2xl md:text-2xl mb-3 font-Ovo mt-10 md:mt-30">
+                Hi! I&apos;m Harsh Saini👋
             </motion.h3>
             <motion.h1
                 initial={{ y: -30, opacity: 0 }}
