@@ -25,7 +25,7 @@ import framer from './framer.png'
 import shadcn from './shadcn.svg'
 import vscode from './vscode.png'
 
-import countryImg from './projectImages/countryImg.png'
+import TripItAiImg from './projectImages/TripItAiImg.png'
 import portfolioReactImg from './projectImages/HarshPortfolio.png'
 import portfolioNextjsImg from './projectImages/portfolioNextjs.png'
 
@@ -105,20 +105,20 @@ export const techStackData = [
 
 export const projectsData = [
     {
+        title: 'TripIt-AI using React & Express',
+        description: 'TripIt-AI crafts personalized travel itineraries, optimized routes, and insider recommendations, so you can discover new destinations, activities, and create unforgettable memories.',
+        bgImage: TripItAiImg,
+        techUsed: [{ icon: react }, { icon: express }, { icon: tailwindcss }, , { icon: shadcn }, { icon: typescript }],
+        githubLink: 'https://github.com/sainiharshsaini/TripIt-AI',
+        liveLink: 'https://tripit-ai-fe.vercel.app/'
+    },
+    {
         title: 'My Portfolio using Nextjs',
         description: 'A personal portfolio built using Next.js to showcase my work, skills, and experience as a full-stack web developer.',
         bgImage: portfolioNextjsImg,
         techUsed: [{ icon: next }, { icon: tailwindcss }, { icon: react }, { icon: typescript }, { icon: framer },],
         githubLink: 'https://github.com/sainiharshsaini/Harsh-Portfolio-Nextjs',
         liveLink: 'https://www.harshsaini.tech/'
-    },
-    {
-        title: 'Countries Details App',
-        description: 'A responsive web app that displays detailed information about countries around the world. Built with API integration and clean UI/UX design.',
-        bgImage: countryImg,
-        techUsed: [{ icon: react }],
-        githubLink: 'https://github.com/sainiharshsaini/Countries-Details-App',
-        liveLink: 'https://countriesappbyharsh.netlify.app/'
     },
     {
         title: 'Portfolio using React',

@@ -4,6 +4,7 @@ import { projectsData } from "@/assets/tech-stack-icons/tech-stack"
 import Image from "next/image"
 import Link from "next/link"
 import { motion } from "motion/react"
+import { FaExternalLinkAlt } from "react-icons/fa";
 
 interface workPropsType {
     isDarkMode: boolean;
@@ -49,7 +50,7 @@ const Work = ({ isDarkMode }: workPropsType) => {
                     <motion.div
                         whileHover={{ scale: 1.05 }}
                         transition={{ duration: 0.3 }}
-                        className="border-gray-400 rounded-lg relative cursor-pointer border overflow-hidden" key={index}
+                        className={`border-gray-400 rounded-lg relative cursor-pointer border overflow-hidden dark:hover:bg-darkHover hover:shadow-black dark:hover:shadow-white duration-300`} key={index}
                     >
                         <Image src={bgImage} alt="projectsImg" className="p-2" />
                         <div className="bg-transparent rounded-md py-3 px-5 flex items-center flex-col justify-between gap-6">
@@ -62,14 +63,13 @@ const Work = ({ isDarkMode }: workPropsType) => {
                                     <Image key={index} src={icon} alt="techused" className="w-6" />
                                 ))}
                             </div> */}
-                            <div className="flex items-center justify-end w-full gap-1">
-                                <Link target="_blank" href={githubLink} className="flex text-center text-sm gap-1 rounded py-1.5 px-4 border-gray-400 hover:bg-lightHover  dark:hover:bg-darkHover">
-                                    <Image src={isDarkMode ? assets.github_light : assets.github_dark} alt="send icon" className="w-4" />
-                                    <p>Github</p>
+                            <div className="flex items-center justify-end w-full gap-5 p-2">
+                                <Link target="_blank" href={githubLink} className="text-sm hover:underline underline-offset-2 hover:text-blue-500">
+                                    GitHub
                                 </Link>
-                                <Link target="_blank" href={liveLink} className="flex items-center text-sm gap-1 rounded py-1.5 px-4 border-gray-400 hover:bg-lightHover  dark:hover:bg-darkHover">
-                                    <Image src={assets.live} alt="send icon" className="w-5" />
-                                    <p>Live</p>
+                                <Link target="_blank" href={liveLink} className="flex items-center hover:underline underline-offset-2 text-sm gap-1 hover:text-blue-500">
+                                    View Live
+                                    <FaExternalLinkAlt size={12}/>
                                 </Link>
                             </div>
                         </div>
