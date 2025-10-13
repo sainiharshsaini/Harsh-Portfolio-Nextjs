@@ -105,14 +105,6 @@ export const techStackData = [
 
 export const projectsData = [
     {
-        title: 'TripIt-AI using React & Express',
-        description: 'TripIt-AI crafts personalized travel itineraries, optimized routes, and insider recommendations, so you can discover new destinations, activities, and create unforgettable memories.',
-        bgImage: TripItAiImg,
-        techUsed: [{ icon: react }, { icon: express }, { icon: tailwindcss }, , { icon: shadcn }, { icon: typescript }],
-        githubLink: 'https://github.com/sainiharshsaini/TripIt-AI',
-        liveLink: 'https://tripit-ai-fe.vercel.app/'
-    },
-    {
         title: 'My Portfolio using Nextjs',
         description: 'A personal portfolio built using Next.js to showcase my work, skills, and experience as a full-stack web developer.',
         bgImage: portfolioNextjsImg,
@@ -121,11 +113,19 @@ export const projectsData = [
         liveLink: 'https://www.harshsaini.tech/'
     },
     {
-        title: 'Portfolio using React',
-        description: 'A fully interactive portfolio website & a clean and sleek design while showcasing the power of Projects & Skills in Web development.',
+        title: 'ExpenseHero',
+        description: 'A simple personal finance app to track daily expenses and control your budget easily.',
         bgImage: portfolioReactImg,
         techUsed: [{ icon: react }, { icon: tailwindcss }],
-        githubLink: 'https://github.com/sainiharshsaini/Harsh-Portfolio-Reactjs-03',
-        liveLink: 'https://harsh-saini-portfolio-website.vercel.app/'
+        githubLink: 'https://github.com/sainiharshsaini/Expense-Hero',
+        liveLink: 'https://expensehero.vercel.app/'
+    },
+    {
+        title: 'PixelPay',
+        description: 'A finance wallet like paytm.',
+        bgImage: portfolioReactImg,
+        techUsed: [{ icon: react }, { icon: tailwindcss }],
+        githubLink: 'https://github.com/sainiharshsaini/PixelPay',
+        liveLink: ''
     }
 ]

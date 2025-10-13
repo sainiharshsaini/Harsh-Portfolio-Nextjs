@@ -9,39 +9,41 @@ import Navbar from "./components/Navbar";
 import Services from "./components/Services";
 import Work from "./components/Work";
 import TechStack from "./components/TechStack";
+import HeroSection from "@/components/sections/hero-section";
 
 export default function Home() {
-  const [isDarkMode, setIsDarkMode] = useState<boolean>(false);
+  // const [isDarkMode, setIsDarkMode] = useState<boolean>(false);
 
-  useEffect(() => {
-    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-      setIsDarkMode(true)
-    } else {
-      setIsDarkMode(false)
-    }
-  }, [])
+  // useEffect(() => {
+  //   if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+  //     setIsDarkMode(true)
+  //   } else {
+  //     setIsDarkMode(false)
+  //   }
+  // }, [])
 
-  useEffect(() => {
-    if (isDarkMode) {
-      document.documentElement.classList.add('dark');
-      localStorage.theme = 'dark';
-    } else {
-      document.documentElement.classList.remove('dark');
-      localStorage.theme = '';
-    }
+  // useEffect(() => {
+  //   if (isDarkMode) {
+  //     document.documentElement.classList.add('dark');
+  //     localStorage.theme = 'dark';
+  //   } else {
+  //     document.documentElement.classList.remove('dark');
+  //     localStorage.theme = '';
+  //   }
 
-  }, [isDarkMode])
+  // }, [isDarkMode])
 
   return (
     <>
-      <Navbar isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
+    <HeroSection/>
+      {/* <Navbar isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
       <Header />
       <About isDarkMode={isDarkMode} />
       <TechStack/>
       <Services />
       <Work isDarkMode={isDarkMode} />
       <Contact />
-      <Footer isDarkMode={isDarkMode} />
+      <Footer isDarkMode={isDarkMode} /> */}
     </>
   );
 }
