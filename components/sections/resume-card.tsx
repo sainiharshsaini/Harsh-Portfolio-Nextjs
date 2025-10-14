@@ -53,7 +53,7 @@ export function ResumeCard({
     }, [])
 
     return (
-        <div className="relative w-full max-w-md bg-white dark:bg-gray-900 rounded-lg border border-gray-200 dark:border-gray-700 p-6 my-2">
+        <div className="relative w-full max-w-md bg-white dark:bg-gray-900 rounded-lg border border-gray-200 dark:border-gray-700 p-4 my-2">
             <div className="flex items-center justify-between">
                 {/* Left side - PDF Icon and Info */}
                 <div className="flex items-center gap-3">

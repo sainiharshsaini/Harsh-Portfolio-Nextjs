@@ -6,11 +6,8 @@ import Link from "next/link"
 import { motion } from "motion/react"
 import { FaExternalLinkAlt } from "react-icons/fa";
 
-interface workPropsType {
-    isDarkMode: boolean;
-}
 
-const Work = ({ isDarkMode }: workPropsType) => {
+const Work = () => {
     return (
         <motion.div
             initial={{ opacity: 0 }}
@@ -82,7 +79,8 @@ const Work = ({ isDarkMode }: workPropsType) => {
                 transition={{ duration: 0.5, delay: 1.1 }}
             >
                 <Link href="" className="w-max flex items-center justify-center gap-2 text-gray-700 border-[0.5px] border-gray-700 rounded-full py-3 px-10 mx-auto my-20 hover:bg-lightHover duration-500 dark:text-white dark:border-white dark:hover:bg-darkHover">
-                    Show more <Image src={isDarkMode ? assets.right_arrow_bold_dark : assets.right_arrow_bold} alt="Right arrow" className="w-4" />
+                    Show more 
+                    {/* <Image src={isDarkMode ? assets.right_arrow_bold_dark : assets.right_arrow_bold} alt="Right arrow" className="w-4" /> */}
                 </Link>
             </motion.div>
         </motion.div>
