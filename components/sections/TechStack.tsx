@@ -8,7 +8,7 @@ const TechStack = () => {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.9 }}
-            id="about" className="w-full px-[10%] py-10 scroll-mt-20">
+            id="tech-stack" className="w-full px-[10%] py-10 scroll-mt-20">
             <motion.h4
                 initial={{ y: -20, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}

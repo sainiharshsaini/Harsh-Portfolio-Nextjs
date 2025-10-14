@@ -3,41 +3,42 @@ import Image from 'next/image'
 import profileImg from "@/images/profile-img.png"
 import bgCoverImg from "@/images/profile-bg-cover.jpg"
 import ThemeModeToggle from '@/components/shared/theme-mode-toggle'
+import { BorderTrail } from '../motion-primitives/border-trail'
+import Navbar from '../layout/navbar'
+import { ResumeCard } from './resume-card'
+import { ProfileUpdateTime } from './profile-update-time'
+import { GlowEffect } from '../motion-primitives/glow-effect'
+import About from '@/components/sections/About'
+import Work from '@/components/sections/Work'
+import Services from './Services'
+import TechStack from './TechStack'
 
 const HeroSection = () => {
     return (
-        <div className="w-full mx-auto shadow-md overflow-hidden min-h-screen relative">
-
-            <div
-                className="absolute inset-0 z-0"
-                style={{
-                    backgroundImage: `
-        linear-gradient(to right, rgba(229,231,235,0.8) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(229,231,235,0.8) 1px, transparent 1px),
-        radial-gradient(circle 500px at 20% 100%, rgba(139,92,246,0.3), transparent),
-        radial-gradient(circle 500px at 100% 80%, rgba(59,130,246,0.3), transparent)
-      `,
-                    backgroundSize: "48px 48px, 48px 48px, 100% 100%, 100% 100%",
-                }}
+        <div className="w-full mx-auto overflow-hidden">
+            <Image
+                className="h-24 w-full object-cover"
+                src={bgCoverImg}
+                alt="Bg-cover"
             />
-
-            <div className='relative z-2 bg-transparent'>
-                <Image
-                    className="h-24 w-full object-cover"
-                    src={bgCoverImg}
-                    alt="Bg-cover"
-                />
-
-                <div className="flex justify-between px-4 -mt-8">
+            <div className='px-4'>
+                <div className="flex justify-between -mt-8">
                     <div className="flex flex-col items-start">
-                        <Image
-                            src={profileImg}
-                            alt="Profile-img"
-                            className="w-24 h-24 rounded-full ring-4 ring-white shadow-lg"
-                        />
+                        <div className='relative rounded-full'>
+                            <BorderTrail
+                                className='bg-linear-to-l from-blue-200 via-blue-500 to-blue-200 dark:from-blue-400 dark:via-blue-500 dark:to-blue-700'
+                                size={120}
+                            />
+
+                            <Image
+                                src={profileImg}
+                                alt="Profile-img"
+                                className="w-24 h-24 rounded-full border-4 shadow-lg"
+                            />
+                        </div>
                         <div className="pt-2">
                             <h2 className="flex items-center gap-1 text-xl font-sans font-bold">
-                                Engr Harsh Saini
+                                Harsh Saini
                                 <span className="text-blue-500">
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
@@ -57,6 +58,49 @@ const HeroSection = () => {
 
                     <div className="flex flex-col justify-center">
                         <ThemeModeToggle />
+                    </div>
+                </div>
+
+                <div className='flex flex-col gap-1 justify-between text-xs my-4 text-slate-600'>
+                    <p className='flex gap-2 items-center'>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" className="icon icon-tabler icons-tabler-filled icon-tabler-mail"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M22 7.535v9.465a3 3 0 0 1 -2.824 2.995l-.176 .005h-14a3 3 0 0 1 -2.995 -2.824l-.005 -.176v-9.465l9.445 6.297l.116 .066a1 1 0 0 0 .878 0l.116 -.066l9.445 -6.297z" /><path d="M19 4c1.08 0 2.027 .57 2.555 1.427l-9.555 6.37l-9.555 -6.37a2.999 2.999 0 0 1 2.354 -1.42l.201 -.007h14z" /></svg>
+                        singhharshsaini7@gmail.com</p>
+                    <p className='flex gap-2 items-center'>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" className="icon icon-tabler icons-tabler-filled icon-tabler-map-pin"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M18.364 4.636a9 9 0 0 1 .203 12.519l-.203 .21l-4.243 4.242a3 3 0 0 1 -4.097 .135l-.144 -.135l-4.244 -4.243a9 9 0 0 1 12.728 -12.728zm-6.364 3.364a3 3 0 1 0 0 6a3 3 0 0 0 0 -6z" /></svg>
+                        Roorkee, Uttarakhand, IN
+                    </p>
+                    <p className='pl-1 pt-2'>
+                        <ProfileUpdateTime
+                            lastUpdated={new Date('2025-10-08')}
+                            className="text-xs"
+                        />
+                    </p>
+                </div>
+
+                <div>
+                    <h2 className="text-xl font-semibold text-gray-900 ">
+                        Resume
+                    </h2>
+                    <div className='relative'>
+                        <GlowEffect
+                            colors={['#FF5733', '#33FF57', '#3357FF', '#F1C40F']}
+                            mode='colorShift'
+                            blur='soft'
+                            duration={3}
+                            scale={0.9}
+                        />
+                        <ResumeCard />
+                    </div>
+                </div>
+
+                {/* navbar */}
+                <div className="py-4">
+                    <Navbar />
+                    <div>
+                        <About/>
+                        <TechStack/>
+                        <Work/>
+                        <Services/>
                     </div>
                 </div>
             </div>

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Outfit, Ovo } from "next/font/google";
 import "./globals.css";
 import ThemeProvider from "@/components/shared/theme-provider";
+import GridPattern from "@/components/shared/grid-pattern";
 
 const outfit = Outfit({
   subsets: ["latin"],
@@ -35,7 +36,12 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <section className="min-h-screen w-full bg-background relative">
+            <GridPattern />
+            <div className="relative z-10">
+              {children}
+            </div>
+          </section>
         </ThemeProvider>
       </body>
     </html>
