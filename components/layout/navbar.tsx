@@ -1,5 +1,5 @@
 import React from 'react'
-import { Home, PhoneCall, Settings, User } from 'lucide-react';
+import { Home, PhoneCall, Settings, User, Handshake } from 'lucide-react';
 import { AnimatedBackground } from '../motion-primitives/animated-background';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -29,7 +29,7 @@ const TABS = [
   {
     href: '#services',
     label: 'Services',
-    icon: <Settings className='h-5 w-5' />,
+    icon: <Handshake className='h-5 w-5' />,
   },
 ];
 

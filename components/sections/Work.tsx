@@ -13,7 +13,7 @@ const Work = () => {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 1 }}
-            id="work" className="w-full px-[10%] py-10 scroll-mt-20">
+            id="work" className="w-full mx-auto p-2 mt-10">
             <motion.h4
                 initial={{ y: -20, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
@@ -72,16 +72,6 @@ const Work = () => {
                         </div>
                     </motion.div>
                 ))}
-            </motion.div>
-            <motion.div
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                transition={{ duration: 0.5, delay: 1.1 }}
-            >
-                <Link href="" className="w-max flex items-center justify-center gap-2 text-gray-700 border-[0.5px] border-gray-700 rounded-full py-3 px-10 mx-auto my-20 hover:bg-lightHover duration-500 dark:text-white dark:border-white dark:hover:bg-darkHover">
-                    Show more 
-                    {/* <Image src={isDarkMode ? assets.right_arrow_bold_dark : assets.right_arrow_bold} alt="Right arrow" className="w-4" /> */}
-                </Link>
             </motion.div>
         </motion.div>
     )

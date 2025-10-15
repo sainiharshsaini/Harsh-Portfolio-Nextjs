@@ -61,26 +61,21 @@ export const tech_stack_icons = {
 export const techStackData = [
     {
         techType: 'Languages', techData: [
-            { imgLink: tech_stack_icons.html, imgName: "HTML" },
-            { imgLink: tech_stack_icons.css, imgName: "CSS" },
             { imgLink: tech_stack_icons.javascript, imgName: "JavaScript" },
             { imgLink: tech_stack_icons.typescript, imgName: "TypeScript" },
-            { imgLink: tech_stack_icons.python, imgName: "Python" },
-            { imgLink: tech_stack_icons.c, imgName: "C" },
             { imgLink: tech_stack_icons.cpp, imgName: "C++" },
             { imgLink: tech_stack_icons.java, imgName: "Java" },
-            { imgLink: tech_stack_icons.sass, imgName: "Sass" }
+            { imgLink: tech_stack_icons.python, imgName: "Python" },
         ]
     },
     {
         techType: 'Libraries & Frameworks', techData: [
-            { imgLink: tech_stack_icons.react, imgName: "React" },
-            { imgLink: tech_stack_icons.node, imgName: "Nodejs" },
-            { imgLink: tech_stack_icons.express, imgName: "Express" },
-            { imgLink: tech_stack_icons.next, imgName: "Nextjs" },
+            { imgLink: tech_stack_icons.react, imgName: "ReactJS" },
+            { imgLink: tech_stack_icons.node, imgName: "NodeJS" },
+            { imgLink: tech_stack_icons.express, imgName: "ExpressJS" },
+            { imgLink: tech_stack_icons.next, imgName: "NextJS" },
             { imgLink: tech_stack_icons.tailwindcss, imgName: "TailwindCSS" },
             { imgLink: tech_stack_icons.shadcn, imgName: "Shadcn/ui" },
-            { imgLink: tech_stack_icons.figma, imgName: "Figma" },
             { imgLink: tech_stack_icons.framer, imgName: "Framer" },
             { imgLink: tech_stack_icons.turborepo, imgName: "Turborepo" }
         ]
@@ -95,10 +90,8 @@ export const techStackData = [
     },
     {
         techType: 'Tools & Technologies', techData: [
-            { imgLink: tech_stack_icons.vscode, imgName: "VS Code" },
-            { imgLink: tech_stack_icons.git, imgName: "Git" },
-            { imgLink: tech_stack_icons.github, imgName: "GitHub" },
-            { imgLink: tech_stack_icons.postman, imgName: "Postman" }
+            { imgLink: tech_stack_icons.vscode, imgName: "REST API" },
+            { imgLink: tech_stack_icons.git, imgName: "Git" }
         ]
     },
 ];
