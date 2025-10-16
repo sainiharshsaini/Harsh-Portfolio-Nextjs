@@ -8,7 +8,7 @@ const TechStack = () => {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.9 }}
-            id="tech-stack" className="w-full mx-auto p-2 mt-10">
+            id="skills" className="w-full mx-auto p-2 mt-10">
             <motion.h4
                 initial={{ y: -20, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}

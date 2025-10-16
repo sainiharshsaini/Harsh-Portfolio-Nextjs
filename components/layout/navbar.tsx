@@ -1,5 +1,5 @@
 import React from 'react'
-import { Home, PhoneCall, Settings, User, Handshake } from 'lucide-react';
+import { Home, User, Contact } from 'lucide-react';
 import { AnimatedBackground } from '../motion-primitives/animated-background';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -11,25 +11,25 @@ const TABS = [
     label: 'Home',
     icon: <Home className='h-5 w-5' />,
   },
+  // {
+  //   href: '#about',
+  //   label: 'About',
+  //   icon: <User className='h-5 w-5' />,
+  // },
   {
-    href: '#about',
-    label: 'About',
+    href: '#skills',
+    label: 'Skills',
     icon: <User className='h-5 w-5' />,
   },
   {
-    href: '#tech-stack',
-    label: 'Tech Stack',
-    icon: <User className='h-5 w-5' />,
+    href: '#projects',
+    label: 'Projects',
+    icon: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="icon icon-tabler icons-tabler-outline icon-tabler-folder-code"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M11 19h-6a2 2 0 0 1 -2 -2v-11a2 2 0 0 1 2 -2h4l3 3h7a2 2 0 0 1 2 2v4" /><path d="M20 21l2 -2l-2 -2" /><path d="M17 17l-2 2l2 2" /></svg>,
   },
   {
-    href: '#work',
-    label: 'Work',
-    icon: <PhoneCall className='h-5 w-5' />,
-  },
-  {
-    href: '#services',
-    label: 'Services',
-    icon: <Handshake className='h-5 w-5' />,
+    href: '#contact',
+    label: 'Contact',
+    icon: <Contact className='h-5 w-5' />,
   },
 ];
 
@@ -49,8 +49,8 @@ const Navbar = () => {
 
   return (
     <div className={`transition-all duration-300 ${isSticky
-        ? "fixed top-0 left-0 w-full bg-white/70 backdrop-blur-md shadow-md z-50"
-        : "relative bg-transparent"
+      ? "sticky top-0 left-0 bg-white/70 backdrop-blur-md shadow-md z-10"
+      : "relative bg-transparent"
       }`}>
       <div className='flex w-full space-x-2 rounded-xl border border-zinc-950/10 bg-white p-2'>
         <AnimatedBackground
@@ -71,12 +71,11 @@ const Navbar = () => {
               className={`inline-flex h-9 w-full items-center justify-center text-zinc-500 transition-colors duration-100 focus-visible:outline-2 ${pathName === tab.href ? "text-zinc-950" : ""
                 }`}
             >
-              {tab.icon}
+              {tab.label}
             </Link>
           ))}
         </AnimatedBackground>
       </div>
-      
     </div>
   )
 }

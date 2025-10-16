@@ -8,7 +8,7 @@ const GridPattern = () => {
 
     if (theme === "dark")
         return <div
-            className="absolute inset-0 z-0"
+            className="fixed inset-0 z-0 w-full mx-auto md:w-5/6 lg:w-3/4 xl:w-3/5"
             style={{
                 background: "#020617",
                 backgroundImage: `
@@ -21,7 +21,7 @@ const GridPattern = () => {
         />
 
     return <div
-        className="absolute inset-0 z-0 bg-background"
+        className="fixed inset-0 z-0 w-full mx-auto md:w-5/6 lg:w-3/4 xl:w-3/5"
         style={{
             backgroundImage: `
         linear-gradient(to right, rgba(229,231,235,0.8) 1px, transparent 1px),

@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect } from 'react'
 import { FileText, MoreVertical, Download, Eye } from 'lucide-react'
+import { GlowEffect } from '../motion-primitives/glow-effect'
 
 interface ResumeCardProps {
     fileName?: string
@@ -53,62 +54,72 @@ export function ResumeCard({
     }, [])
 
     return (
-        <div className="relative w-full max-w-md bg-white dark:bg-gray-900 rounded-lg border border-gray-200 dark:border-gray-700 p-4 my-2">
-            <div className="flex items-center justify-between">
-                {/* Left side - PDF Icon and Info */}
-                <div className="flex items-center gap-3">
-                    {/* PDF Icon */}
-                    <div className="relative">
-                        <div className="w-12 h-14 bg-blue-600 rounded flex items-center justify-center">
-                            <FileText className="w-6 h-6 text-white" />
+        <div className='relative'>
+            <GlowEffect
+                colors={['#FF5733', '#33FF57', '#3357FF', '#F1C40F']}
+                mode='colorShift'
+                blur='soft'
+                duration={3}
+                scale={0.9}
+            />
+            <div className="relative bg-white dark:bg-gray-900 rounded-lg border border-gray-200 dark:border-gray-700 p-4 my-4 lg:mx-12">
+                <div className="flex items-center justify-between">
+                    {/* Left side - PDF Icon and Info */}
+                    <div className="flex items-center gap-3">
+                        {/* PDF Icon */}
+                        <div className="relative">
+                            <div className="w-12 h-14 bg-blue-600 rounded flex items-center justify-center">
+                                <FileText className="w-6 h-6 text-white" />
+                            </div>
+                            <span className="absolute -bottom-1 left-1/2 -translate-x-1/2 text-[10px] font-bold text-white bg-blue-600 px-1.5 py-0.5 rounded">
+                                PDF
+                            </span>
                         </div>
-                        <span className="absolute -bottom-1 left-1/2 -translate-x-1/2 text-[10px] font-bold text-white bg-blue-600 px-1.5 py-0.5 rounded">
-                            PDF
-                        </span>
+
+                        {/* File Info */}
+                        <div>
+                            <h3 className="text-sm font-medium text-gray-900 dark:text-white">
+                                {fileName}
+                            </h3>
+                            <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
+                                {formatDate(uploadDate)}
+                            </p>
+                        </div>
                     </div>
 
-                    {/* File Info */}
-                    <div>
-                        <h3 className="text-sm font-medium text-gray-900 dark:text-white">
-                            {fileName}
-                        </h3>
-                        <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
-                            {formatDate(uploadDate)}
-                        </p>
+                    {/* Right side - Three Dot Menu */}
+                    <div className="relative" ref={menuRef}>
+                        <button
+                            onClick={() => setIsMenuOpen(!isMenuOpen)}
+                            className="p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-full transition-colors"
+                            aria-label="More options"
+                        >
+                            <MoreVertical className="w-5 h-5 text-gray-600 dark:text-gray-400" />
+                        </button>
+
+                        {/* Dropdown Menu */}
+                        {isMenuOpen && (
+                            <div className="absolute right-0 mt-2 w-48 bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 py-2 z-10">
+                                <button
+                                    onClick={handleView}
+                                    className="w-full flex items-center gap-3 px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+                                >
+                                    <Eye className="w-4 h-4" />
+                                    View Resume
+                                </button>
+                                <button
+                                    onClick={handleDownload}
+                                    className="w-full flex items-center gap-3 px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+                                >
+                                    <Download className="w-4 h-4" />
+                                    Download Resume
+                                </button>
+                            </div>
+                        )}
                     </div>
-                </div>
-
-                {/* Right side - Three Dot Menu */}
-                <div className="relative" ref={menuRef}>
-                    <button
-                        onClick={() => setIsMenuOpen(!isMenuOpen)}
-                        className="p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-full transition-colors"
-                        aria-label="More options"
-                    >
-                        <MoreVertical className="w-5 h-5 text-gray-600 dark:text-gray-400" />
-                    </button>
-
-                    {/* Dropdown Menu */}
-                    {isMenuOpen && (
-                        <div className="absolute right-0 mt-2 w-48 bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 py-2 z-10">
-                            <button
-                                onClick={handleView}
-                                className="w-full flex items-center gap-3 px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
-                            >
-                                <Eye className="w-4 h-4" />
-                                View Resume
-                            </button>
-                            <button
-                                onClick={handleDownload}
-                                className="w-full flex items-center gap-3 px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
-                            >
-                                <Download className="w-4 h-4" />
-                                Download Resume
-                            </button>
-                        </div>
-                    )}
                 </div>
             </div>
         </div>
+
     )
 }

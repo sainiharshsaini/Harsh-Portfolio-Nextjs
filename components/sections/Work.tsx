@@ -13,7 +13,7 @@ const Work = () => {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 1 }}
-            id="work" className="w-full mx-auto p-2 mt-10">
+            id="projects" className="w-full mx-auto p-2 mt-10">
             <motion.h4
                 initial={{ y: -20, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
