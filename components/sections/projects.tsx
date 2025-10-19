@@ -7,7 +7,7 @@ import { motion } from "motion/react"
 import { FaExternalLinkAlt } from "react-icons/fa";
 
 
-const Work = () => {
+const Projects = () => {
     return (
         <motion.div
             initial={{ opacity: 0 }}
@@ -77,4 +77,4 @@ const Work = () => {
     )
 }
 
-export default Work
+export default Projects

@@ -1,63 +1,58 @@
-import { infoList } from "@/assets/assets"
 import { motion } from "motion/react"
-import Image from "next/image"
+import { Tilt } from "../motion-primitives/tilt"
+import ServicesCards from "./services-card";
+import FeaturesCards from "./features-card";
 
 const About = () => {
     return (
-        <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 1 }}
-            id="about" className="w-full mx-auto p-2 mt-10 ">
-            <motion.h4
-                initial={{ y: -20, opacity: 0 }}
-                whileInView={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.5, delay: 0.3 }}
-                className="text-center mb-2 text-lg font-Ovo">Introduction</motion.h4>
-            <motion.h2
-                initial={{ y: -20, opacity: 0 }}
-                whileInView={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.5, delay: 0.5 }}
-                className="text-center text-5xl font-Ovo">About me</motion.h2>
-
-            <motion.div
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                transition={{ duration: 0.8 }}
-                className="my-20">
-                
+        <div className="flex flex-col gap-8 justify-between">
+            <Tilt rotationFactor={8} isRevese>
                 <motion.div
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
-                    transition={{ duration: 0.6, delay: 0.8 }}
-                    className="flex-1">
-                    <p className="mb-10 font-Ovo">
-                        I&apos;m a Full-Stack Developer with great passion for coding & building scalable web apps with clean UI and robust backend systems.
-                        With DevOps expertise, I automate deployments, manage cloud infrastructure, and streamline CI/CD workflows.
-                        I blend clean code with real-world problem-solving to deliver high-impact, performance-driven solutions.
-                        <br />
-                        <br />
-                        I&apos;m open to Job opportunities where I can contribute, learn and grow. If you have a good opportunity that matches my skills and experience then don&apos;t hesitate to contact me.
-                    </p>
-                    <motion.ul
+                    transition={{ duration: 1 }}
+                    id="about"
+                    style={{
+                        borderRadius: '12px',
+                    }}
+                    className='flex max-w-full p-8 lg:p-12 flex-col  shadow-sm overflow-hidden border border-zinc-950/10 bg-white/50 dark:border-zinc-50/10 dark:bg-zinc-900'
+                >
+                    <motion.h2
+                        initial={{ y: -20, opacity: 0 }}
+                        whileInView={{ y: 0, opacity: 1 }}
+                        transition={{ duration: 0.5, delay: 0.5 }}
+                        className="text-center text-3xl mb-4 md:mb-8">
+                        About me
+                    </motion.h2>
+
+                    <motion.div
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
-                        transition={{ duration: 0.8, delay: 1 }}
-                        className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl">
-                        {infoList.map(({ icon, iconDark, title, description }, index) => (
-                            <motion.li
-                                whileHover={{ scale: 1.05 }}
-                                className="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 hover:shadow-black dark:border-white dark:hover:shadow-white dark:hover:bg-darkHover/50" key={index}>
-                                <Image src={icon} alt={title} className="w-7 mt-3" />
-                                <h3 className="my-4 font-semibold text-gray-700 dark:text-white">{title}</h3>
-                                <p className="text-gray-600 text-sm dark:text-white/80">{description}</p>
-                            </motion.li>
-                        ))}
-                    </motion.ul>
-                    
+                        transition={{ duration: 0.8 }}
+                    >
+
+                        <motion.div
+                            initial={{ opacity: 0 }}
+                            whileInView={{ opacity: 1 }}
+                            transition={{ duration: 0.6, delay: 0.8 }}
+                            className="flex-1">
+                            <p className="text-sm">
+                                I&apos;m a Full-Stack Developer with great passion for coding & building scalable web apps with clean UI and robust backend systems.
+                                With DevOps expertise, I automate deployments, manage cloud infrastructure, and streamline CI/CD workflows.
+                                I blend clean code with real-world problem-solving to deliver high-impact, performance-driven solutions.
+                                <br />
+                                <br />
+                                I&apos;m open to Job opportunities where I can contribute, learn and grow. If you have a good opportunity that matches my skills and experience then don&apos;t hesitate to contact me.
+                            </p>
+                        </motion.div>
+                    </motion.div>
                 </motion.div>
-            </motion.div>
-        </motion.div>
+            </Tilt>
+
+            <FeaturesCards/>
+
+            <ServicesCards/>
+        </div>
     )
 }
 

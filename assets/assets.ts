@@ -82,13 +82,7 @@ export const assets = {
     right_arrow_bold_dark
 };
 
-export const serviceData = [
-    { icon: assets.web_dev, title: 'Web development', description: 'I craft scalable full-stack web apps using modern frameworks like React, Next.js, etc. From frontend design to backend logic, I turn ideas into fully functional products...', link: '' },
-    { icon: assets.devOps, title: 'DevOps', description: 'I automate deployment pipelines and manage cloud infrastructure to boost development speed. Ensuring reliability, scalability, and security across the entire software lifecycle...', link: '' }
-]
-
 export const infoList = [
-    { icon: assets.code_icon, iconDark: assets.code_icon_dark, title: 'Languages', description: 'C++, Java, Python, Javascript, Typescript' },
     { icon: assets.edu_icon, iconDark: assets.edu_icon_dark, title: 'Education', description: 'B.Tech in Computer Science at COER University, Roorkee' },
     { icon: assets.project_icon, iconDark: assets.project_icon_dark, title: 'Projects', description: 'Built more than 3 real-world big projects' }
 ];
