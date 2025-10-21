@@ -25,7 +25,7 @@ const ServicesCards = () => {
             transition={{ duration: 1 }}
             viewport={{ once: true }}
             id="services"
-            className="w-full mx-auto px-4 py-16 md:py-24 scroll-mt-20"
+            className="w-full mx-auto scroll-mt-20"
         >
             <div className="max-w-7xl mx-auto">
                 <motion.h4

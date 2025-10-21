@@ -2,7 +2,6 @@
 
 import { useState, useRef, useEffect } from 'react'
 import { FileText, MoreVertical, Download, Eye } from 'lucide-react'
-import { GlowEffect } from '../motion-primitives/glow-effect'
 
 interface ResumeCardProps {
     fileName?: string
@@ -41,7 +40,6 @@ export function ResumeCard({
         setIsMenuOpen(false)
     }
 
-    // Close menu when clicking outside
     useEffect(() => {
         const handleClickOutside = (event: MouseEvent) => {
             if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
@@ -54,72 +52,66 @@ export function ResumeCard({
     }, [])
 
     return (
-        <div className='relative'>
-            <GlowEffect
-                colors={['#FF5733', '#33FF57', '#3357FF', '#F1C40F']}
-                mode='colorShift'
-                blur='soft'
-                duration={3}
-                scale={0.9}
-            />
-            <div className="relative bg-white dark:bg-gray-900 rounded-lg border border-gray-200 dark:border-gray-700 p-4 my-4 lg:mx-12">
-                <div className="flex items-center justify-between">
+        <div className="w-full md:px-8 lg:px-12 py-4">
+            <div className="relative bg-card text-card-foreground rounded-lg border shadow-sm p-3 sm:p-4 transition-colors">
+                <div className="flex items-center justify-between gap-3">
                     {/* Left side - PDF Icon and Info */}
-                    <div className="flex items-center gap-3">
+                    <div className="flex items-center gap-2 sm:gap-3 min-w-0 flex-1">
                         {/* PDF Icon */}
-                        <div className="relative">
-                            <div className="w-12 h-14 bg-blue-600 rounded flex items-center justify-center">
-                                <FileText className="w-6 h-6 text-white" />
+                        <div className="relative flex-shrink-0">
+                            <div className="w-10 h-12 sm:w-12 sm:h-14 bg-primary rounded flex items-center justify-center">
+                                <FileText className="w-5 h-5 sm:w-6 sm:h-6 text-primary-foreground" />
                             </div>
-                            <span className="absolute -bottom-1 left-1/2 -translate-x-1/2 text-[10px] font-bold text-white bg-blue-600 px-1.5 py-0.5 rounded">
+                            <span className="absolute -bottom-1 left-1/2 -translate-x-1/2 text-[9px] sm:text-[10px] font-bold text-primary-foreground bg-primary px-1 sm:px-1.5 py-0.5 rounded whitespace-nowrap">
                                 PDF
                             </span>
                         </div>
 
                         {/* File Info */}
-                        <div>
-                            <h3 className="text-sm font-medium text-gray-900 dark:text-white">
+                        <div className="min-w-0 flex-1">
+                            <h3 className="text-xs sm:text-sm font-medium text-foreground truncate">
                                 {fileName}
                             </h3>
-                            <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
+                            <p className="text-[10px] sm:text-xs text-muted-foreground mt-0.5 sm:mt-1">
                                 {formatDate(uploadDate)}
                             </p>
                         </div>
                     </div>
 
                     {/* Right side - Three Dot Menu */}
-                    <div className="relative" ref={menuRef}>
+                    <div className="relative flex-shrink-0" ref={menuRef}>
                         <button
                             onClick={() => setIsMenuOpen(!isMenuOpen)}
-                            className="p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-full transition-colors"
+                            className="p-1.5 sm:p-2 hover:bg-accent hover:text-accent-foreground rounded-full transition-colors"
                             aria-label="More options"
                         >
-                            <MoreVertical className="w-5 h-5 text-gray-600 dark:text-gray-400" />
+                            <MoreVertical className="w-4 h-4 sm:w-5 sm:h-5 text-muted-foreground" />
                         </button>
 
                         {/* Dropdown Menu */}
                         {isMenuOpen && (
-                            <div className="absolute right-0 mt-2 w-48 bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 py-2 z-10">
-                                <button
-                                    onClick={handleView}
-                                    className="w-full flex items-center gap-3 px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
-                                >
-                                    <Eye className="w-4 h-4" />
-                                    View Resume
-                                </button>
-                                <button
-                                    onClick={handleDownload}
-                                    className="w-full flex items-center gap-3 px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
-                                >
-                                    <Download className="w-4 h-4" />
-                                    Download Resume
-                                </button>
+                            <div className="absolute right-0 mt-2 w-44 sm:w-48 bg-popover text-popover-foreground rounded-md shadow-md border z-50">
+                                <div className="py-1">
+                                    <button
+                                        onClick={handleView}
+                                        className="w-full flex items-center gap-2 sm:gap-3 px-3 sm:px-4 py-2 text-xs sm:text-sm hover:bg-accent hover:text-accent-foreground transition-colors"
+                                    >
+                                        <Eye className="w-3.5 h-3.5 sm:w-4 sm:h-4 flex-shrink-0" />
+                                        <span>View Resume</span>
+                                    </button>
+                                    <button
+                                        onClick={handleDownload}
+                                        className="w-full flex items-center gap-2 sm:gap-3 px-3 sm:px-4 py-2 text-xs sm:text-sm hover:bg-accent hover:text-accent-foreground transition-colors"
+                                    >
+                                        <Download className="w-3.5 h-3.5 sm:w-4 sm:h-4 flex-shrink-0" />
+                                        <span>Download Resume</span>
+                                    </button>
+                                </div>
                             </div>
                         )}
                     </div>
                 </div>
             </div>
         </div>
-
     )
 }

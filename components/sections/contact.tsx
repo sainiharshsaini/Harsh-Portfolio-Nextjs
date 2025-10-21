@@ -61,7 +61,7 @@ const Contact = () => {
             whileInView={{ opacity: 1 }}
             transition={{ duration: 1 }}
             id="contact"
-            className="w-full scroll-mt-20 px-2 sm:px-6 lg:px-8 pt-12 sm:pt-16 lg:pt-20 mx-auto flex flex-col justify-between gap-4 max-w-4xl"
+            className="w-full scroll-mt-20 md:px-4 lg:px-8 pt-12 sm:pt-16 lg:pt-20 mx-auto flex flex-col justify-between gap-4 max-w-4xl"
         >
             <motion.h4
                 initial={{ y: -20, opacity: 0 }}

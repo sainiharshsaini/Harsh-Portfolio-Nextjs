@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import "./globals.css";
 import ThemeProvider from "@/components/shared/theme-provider";
 import GridPattern from "@/components/shared/grid-pattern";
-import Footer from "@/components/layout/footer";
 
 export const metadata: Metadata = {
   title: "Harsh - Portfolio",
@@ -33,7 +32,6 @@ export default function RootLayout({
                 {children}
               </div>
             </section>
-            <Footer />
           </div>
         </ThemeProvider>
       </body>
