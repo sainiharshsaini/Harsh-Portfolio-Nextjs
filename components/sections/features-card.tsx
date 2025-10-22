@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Code, Zap, Database, Palette, Shield, Rocket } from "lucide-react";
+import { InfiniteSlider } from "../motion-primitives/infinite-slider";
 
 const infoList = [
     {
@@ -55,39 +56,40 @@ const FeaturesCards = () => {
                         Combining technical excellence with creative problem-solving to deliver exceptional results
                     </p>
                 </motion.div>
+                <div className="grid grid-cols-1 gap-4 md:gap-6">
+                    <InfiniteSlider speedOnHover={20} gap={24}>
+                        {infoList.map(({ icon: Icon, title, description }, index) => (
+                            <motion.div
+                                key={index}
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.5, delay: index * 0.1 }}
+                                viewport={{ once: true }}
+                                className="group relative h-full w-[280px] sm:w-[320px] md:w-[360px]"
+                            >
+                                <div className="relative h-full min-h-[220px] sm:min-h-[240px] md:min-h-[260px] rounded-xl border border-border bg-card overflow-hidden transition-all duration-500 hover:shadow-xl hover:shadow-primary/5 hover:border-primary/30">
 
-                <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
-                    {infoList.map(({ icon: Icon, title, description }, index) => (
-                        <motion.li
-                            key={index}
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.5, delay: index * 0.1 }}
-                            viewport={{ once: true }}
-                            className="group relative h-full"
-                        >
-                            <div className="relative h-full min-h-[240px] sm:min-h-[260px] rounded-xl border border-border bg-card overflow-hidden transition-all duration-500 hover:shadow-xl hover:shadow-primary/5 hover:border-primary/30">
+                                    <div className="absolute inset-0 bg-gradient-to-br from-primary/0 via-primary/0 to-primary/0 group-hover:from-primary/5 group-hover:via-primary/3 group-hover:to-transparent transition-all duration-500" />
 
-                                <div className="absolute inset-0 bg-gradient-to-br from-primary/0 via-primary/0 to-primary/0 group-hover:from-primary/5 group-hover:via-primary/3 group-hover:to-transparent transition-all duration-500" />
-
-                                <div className="relative z-10 h-full p-6 sm:p-8 flex flex-col">
-                                    <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-primary/10 dark:bg-primary/20 flex items-center justify-center mb-4 sm:mb-5 group-hover:bg-primary/20 dark:group-hover:bg-primary/30 group-hover:scale-110 transition-all duration-300 shadow-sm">
-                                        <Icon className="w-6 h-6 sm:w-7 sm:h-7 text-primary" />
+                                    <div className="relative z-10 h-full p-5 sm:p-6 md:p-8 flex flex-col">
+                                        <div className="w-11 h-11 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-xl bg-primary/10 dark:bg-primary/20 flex items-center justify-center mb-3 sm:mb-4 group-hover:bg-primary/20 dark:group-hover:bg-primary/30 group-hover:scale-110 transition-all duration-300 shadow-sm">
+                                            <Icon className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 text-primary" />
+                                        </div>
+                                        <h3 className="text-base sm:text-lg md:text-xl font-semibold text-foreground mb-2 sm:mb-3 group-hover:text-primary transition-colors duration-300">
+                                            {title}
+                                        </h3>
+                                        <p className="text-xs sm:text-sm md:text-base text-muted-foreground leading-relaxed flex-grow">
+                                            {description}
+                                        </p>
+                                        <div className="absolute inset-0 rounded-xl ring-1 ring-transparent group-hover:ring-primary/30 transition-all duration-500" />
                                     </div>
-                                    <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-3 group-hover:text-primary transition-colors duration-300">
-                                        {title}
-                                    </h3>
-                                    <p className="text-sm sm:text-base text-muted-foreground leading-relaxed flex-grow">
-                                        {description}
-                                    </p>
-                                    <div className="absolute inset-0 rounded-xl ring-1 ring-transparent group-hover:ring-primary/30 transition-all duration-500" />
-                                </div>
 
-                                <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-primary/0 to-transparent group-hover:via-primary/50 transition-all duration-500" />
-                            </div>
-                        </motion.li>
-                    ))}
-                </ul>
+                                    <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-primary/0 to-transparent group-hover:via-primary/50 transition-all duration-500" />
+                                </div>
+                            </motion.div>
+                        ))}
+                    </InfiniteSlider>
+                </div>
             </div>
         </section>
     )

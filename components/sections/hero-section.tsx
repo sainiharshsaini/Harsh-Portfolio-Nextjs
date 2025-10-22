@@ -9,10 +9,8 @@ import About from '@/components/sections/about'
 import { ResumeCard } from './resume-card'
 import { motion } from "motion/react";
 import { Mail, MapPin } from 'lucide-react'
-import { useRef } from 'react'
 
 const HeroSection = () => {
-    const navRef = useRef(null);
 
     return (
         <div className="relative w-full mx-auto overflow-hidden">

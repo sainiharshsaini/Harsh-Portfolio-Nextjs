@@ -10,10 +10,20 @@ import {
   useId,
 } from 'react';
 
+interface ChildElementProps {
+  'data-id': string;
+  className?: string;
+  children?: React.ReactNode;
+  'data-checked'?: string;
+  onMouseEnter?: () => void;
+  onMouseLeave?: () => void;
+  onClick?: () => void;
+}
+
 export type AnimatedBackgroundProps = {
   children:
-    | ReactElement<{ 'data-id': string }>[]
-    | ReactElement<{ 'data-id': string }>;
+    | ReactElement<ChildElementProps>[]
+    | ReactElement<ChildElementProps>;
   defaultValue?: string;
   onValueChange?: (newActiveId: string | null) => void;
   className?: string;
@@ -46,7 +56,7 @@ export function AnimatedBackground({
     }
   }, [defaultValue]);
 
-  return Children.map(children, (child: any, index) => {
+  return Children.map(children, (child: React.ReactElement<ChildElementProps>, index) => {
     const id = child.props['data-id'];
 
     const interactionProps = enableHover

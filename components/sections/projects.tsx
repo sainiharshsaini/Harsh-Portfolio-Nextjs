@@ -1,4 +1,3 @@
-import { assets } from "@/assets/assets"
 import { projectsData } from "@/assets/tech-stack-icons/tech-stack"
 
 import Image from "next/image"
@@ -24,19 +23,19 @@ const Projects = () => {
         visible: {
             opacity: 1,
             y: 0,
-            transition: { duration: 0.5, ease: "easeOut" }
+            transition: { duration: 0.5, ease: "easeOut" as const }
         }
     }
 
     return (
         <section id="projects" className="relative w-full py-16 md:py-24 overflow-hidden">
-            {/* Background Elements */}
+            
             <div className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-50/30 to-transparent dark:via-purple-950/20" />
             <div className="absolute top-1/3 left-1/4 w-64 h-64 bg-purple-300/20 dark:bg-purple-600/10 rounded-full blur-3xl" />
             <div className="absolute bottom-1/3 right-1/4 w-64 h-64 bg-blue-300/20 dark:bg-blue-600/10 rounded-full blur-3xl" />
 
             <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                {/* Header */}
+                
                 <motion.div
                     initial={{ opacity: 0, y: -20 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -69,7 +68,7 @@ const Projects = () => {
                         transition={{ duration: 0.5, delay: 0.3 }}
                         className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto font-Ovo"
                     >
-                        Here are some cool things I've built recently. Each project taught me something new and pushed my skills further.
+                        Here are some cool things I&apos;ve built recently. Each project taught me something new and pushed my skills further.
                     </motion.p>
                 </motion.div>
 

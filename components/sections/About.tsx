@@ -1,6 +1,5 @@
 import { motion } from "motion/react"
 import { Tilt } from "../motion-primitives/tilt"
-import ServicesCards from "./services-card";
 import FeaturesCards from "./features-card";
 import { Button } from "../ui/button";
 
@@ -43,7 +42,7 @@ const About = () => {
                         >
                             <div className="prose prose-lg dark:prose-invert max-w-none">
                                 <p className="text-base md:text-lg leading-relaxed text-muted-foreground">
-                                    I'm a <span className="text-foreground font-semibold">Full-Stack Developer</span> with great passion for coding & building scalable web apps with clean UI and robust backend systems.
+                                    I&apos;m a <span className="text-foreground font-semibold">Full-Stack Developer</span> with great passion for coding & building scalable web apps with clean UI and robust backend systems.
                                     With <span className="text-foreground font-semibold">DevOps expertise</span>, I automate deployments, manage cloud infrastructure, and streamline CI/CD workflows.
                                     I blend clean code with real-world problem-solving to deliver high-impact, performance-driven solutions.
                                 </p>
@@ -57,8 +56,8 @@ const About = () => {
                                 className="mt-8 p-6 rounded-xl bg-primary/5 border border-primary/20"
                             >
                                 <p className="text-base leading-relaxed text-foreground">
-                                    💼 I'm open to <span className="font-semibold text-primary">job opportunities</span> where I can contribute, learn and grow.
-                                    If you have a good opportunity that matches my skills and experience, don't hesitate to contact me.
+                                    💼 I&apos;m open to <span className="font-semibold text-primary">job opportunities</span> where I can contribute, learn and grow.
+                                    If you have a good opportunity that matches my skills and experience, don&apos;t hesitate to contact me.
                                 </p>
                                 <Button className="mt-4 px-6 py-3 rounded-lg bg-primary text-primary-foreground font-medium shadow-lg hover:shadow-xl transition-shadow"
                                 >

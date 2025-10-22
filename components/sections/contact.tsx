@@ -7,7 +7,6 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { DockContact } from "./dock-contact";
-import { ResumeCard } from "./resume-card";
 
 const Inputbox = [
     {
@@ -61,7 +60,7 @@ const Contact = () => {
             whileInView={{ opacity: 1 }}
             transition={{ duration: 1 }}
             id="contact"
-            className="w-full scroll-mt-20 md:px-4 lg:px-8 pt-12 sm:pt-16 lg:pt-20 mx-auto flex flex-col justify-between gap-4 max-w-4xl"
+            className="w-full scroll-mt-20 md:px-4 lg:px-8 pt-12 sm:pt-16 lg:pt-20 mx-auto flex flex-col justify-between gap-4 max-w-4xl pb-8"
         >
             <motion.h4
                 initial={{ y: -20, opacity: 0 }}
@@ -76,7 +75,7 @@ const Contact = () => {
                 initial={{ y: -20, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.4, delay: 0.4 }}
-                className="text-center w-full text-3xl sm:text-4xl md:text-5xl font-bold text-foreground"
+                className="text-center w-full text-4xl md:text-5xl font-bold text-foreground"
             >
                 Let&apos;s Connect
             </motion.h2>
@@ -142,11 +141,10 @@ const Contact = () => {
                         className="w-full"
                     >
                         <Textarea
-                            rows={12}
                             placeholder="Enter your message"
                             name="message"
                             required
-                            className="relative w-full p-3 sm:p-4 outline-none border border-input rounded-md bg-background text-foreground placeholder:text-muted-foreground focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 transition-all"
+                            className="relative w-full overflow-hidden min-h-48 p-3 sm:p-4 outline-none border border-input rounded-md bg-background text-foreground placeholder:text-muted-foreground focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 transition-all"
                         />
                     </motion.div>
                 </div>
@@ -185,7 +183,7 @@ const Contact = () => {
                 )}
             </motion.form>
 
-            <div className="mt-16">
+            <div className="mt-20">
                 <DockContact />
             </div>
         </motion.div>
