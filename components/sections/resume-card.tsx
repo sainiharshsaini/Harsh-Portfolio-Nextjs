@@ -55,9 +55,8 @@ export function ResumeCard({
         <div className="w-full md:px-8 lg:px-12 py-4">
             <div className="relative bg-card text-card-foreground rounded-lg border shadow-sm p-3 sm:p-4 transition-colors">
                 <div className="flex items-center justify-between gap-3">
-                    {/* Left side - PDF Icon and Info */}
                     <div className="flex items-center gap-2 sm:gap-3 min-w-0 flex-1">
-                        {/* PDF Icon */}
+
                         <div className="relative flex-shrink-0">
                             <div className="w-10 h-12 sm:w-12 sm:h-14 bg-primary rounded flex items-center justify-center">
                                 <FileText className="w-5 h-5 sm:w-6 sm:h-6 text-primary-foreground" />
@@ -67,7 +66,6 @@ export function ResumeCard({
                             </span>
                         </div>
 
-                        {/* File Info */}
                         <div className="min-w-0 flex-1">
                             <h3 className="text-xs sm:text-sm font-medium text-foreground truncate">
                                 {fileName}
@@ -78,7 +76,6 @@ export function ResumeCard({
                         </div>
                     </div>
 
-                    {/* Right side - Three Dot Menu */}
                     <div className="relative flex-shrink-0" ref={menuRef}>
                         <button
                             onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -88,7 +85,6 @@ export function ResumeCard({
                             <MoreVertical className="w-4 h-4 sm:w-5 sm:h-5 text-muted-foreground" />
                         </button>
 
-                        {/* Dropdown Menu */}
                         {isMenuOpen && (
                             <div className="absolute right-0 mt-2 w-44 sm:w-48 bg-popover text-popover-foreground rounded-md shadow-md border z-50">
                                 <div className="py-1">

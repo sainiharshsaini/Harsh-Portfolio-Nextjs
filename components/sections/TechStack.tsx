@@ -4,7 +4,6 @@ import { techStackData } from '@/assets/tech-stack-icons/tech-stack'
 import ServicesCards from './services-card'
 
 const TechStack = () => {
-
     const containerVariants = {
         hidden: { opacity: 0 },
         visible: {
@@ -27,11 +26,9 @@ const TechStack = () => {
 
     return (
         <section id="skills" className="relative flex flex-col gap-16 w-full py-16 md:py-24 overflow-hidden">
-            {/* Subtle Background */}
             <div className="absolute inset-0 bg-gradient-to-b from-transparent via-blue-50/30 to-transparent dark:via-blue-950/20" />
             
             <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-                {/* Header */}
                 <motion.div
                     initial={{ opacity: 0, y: -20 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -47,7 +44,6 @@ const TechStack = () => {
                     </h2>
                 </motion.div>
 
-                {/* Tech Stack Categories */}
                 <div className="space-y-10">
                     {techStackData.map(({ techType, techData }, categoryIndex) => (
                         <motion.div
@@ -57,12 +53,10 @@ const TechStack = () => {
                             viewport={{ once: true }}
                             transition={{ duration: 0.5, delay: categoryIndex * 0.1 }}
                         >
-                            {/* Category Title */}
                             <h3 className="text-lg md:text-xl font-semibold text-gray-800 dark:text-gray-200 mb-4 font-Ovo">
                                 {techType}
                             </h3>
 
-                            {/* Tech Items */}
                             <motion.div
                                 variants={containerVariants}
                                 initial="hidden"
@@ -79,7 +73,7 @@ const TechStack = () => {
                                         className="group relative"
                                     >
                                         <div className="flex items-center gap-2 px-3 py-2 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-blue-400 dark:hover:border-blue-600 hover:shadow-md hover:shadow-blue-500/10 dark:hover:shadow-blue-500/20 transition-all duration-300 cursor-pointer">
-                                            {/* Icon */}
+
                                             <div className="w-5 h-5 flex items-center justify-center">
                                                 <Image 
                                                     src={imgLink} 
@@ -88,7 +82,6 @@ const TechStack = () => {
                                                 />
                                             </div>
                                             
-                                            {/* Name */}
                                             <span className="text-sm font-medium text-gray-700 dark:text-gray-300 group-hover:text-gray-900 dark:group-hover:text-white transition-colors">
                                                 {imgName}
                                             </span>

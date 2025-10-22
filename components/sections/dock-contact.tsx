@@ -60,22 +60,5 @@ export function DockContact() {
                 </Dock>
             </div>
         </div>
-
-        // <div className='absolute bottom-2 left-1/2 max-w-full -translate-x-1/2'>
-        //     <Dock className='items-end pb-3'>
-        //         {data.map((item, idx) => (
-        //             <DockItem
-        //                 key={idx}
-        //                 className='aspect-square rounded-full bg-gray-200 dark:bg-neutral-800'
-        //             >
-        //                 <DockLabel>{item.title}</DockLabel>
-        //                 <DockIcon>{item.icon}</DockIcon>
-        //                 {/* <Link href={item.href} target="_blank" rel="noopener noreferrer">
-        //                     <DockIcon>{item.icon}</DockIcon>
-        //                 </Link> */}
-        //             </DockItem>
-        //         ))}
-        //     </Dock>
-        // </div>
     );
 }

@@ -5,13 +5,12 @@ import bgCoverImg from "@/images/profile-bg-cover.jpg"
 import ThemeModeToggle from '@/components/shared/theme-mode-toggle'
 import { BorderTrail } from '../motion-primitives/border-trail'
 import { ProfileUpdateTime } from './profile-update-time'
-import About from '@/components/sections/about'
+import About from './about'
 import { ResumeCard } from './resume-card'
 import { motion } from "motion/react";
 import { Mail, MapPin } from 'lucide-react'
 
 const HeroSection = () => {
-
     return (
         <div className="relative w-full mx-auto overflow-hidden">
             <Image

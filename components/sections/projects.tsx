@@ -5,7 +5,6 @@ import Link from "next/link"
 import { motion } from "motion/react"
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa"
 
-
 const Projects = () => {
     const containerVariants = {
         hidden: { opacity: 0 },
@@ -29,13 +28,13 @@ const Projects = () => {
 
     return (
         <section id="projects" className="relative w-full py-16 md:py-24 overflow-hidden">
-            
+
             <div className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-50/30 to-transparent dark:via-purple-950/20" />
             <div className="absolute top-1/3 left-1/4 w-64 h-64 bg-purple-300/20 dark:bg-purple-600/10 rounded-full blur-3xl" />
             <div className="absolute bottom-1/3 right-1/4 w-64 h-64 bg-blue-300/20 dark:bg-blue-600/10 rounded-full blur-3xl" />
 
             <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                
+
                 <motion.div
                     initial={{ opacity: 0, y: -20 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -72,7 +71,6 @@ const Projects = () => {
                     </motion.p>
                 </motion.div>
 
-                {/* Projects Grid */}
                 <motion.div
                     variants={containerVariants}
                     initial="hidden"
@@ -87,26 +85,24 @@ const Projects = () => {
                             className="group relative"
                         >
                             <div className="relative h-full rounded-2xl bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/10 dark:hover:shadow-purple-500/20">
-                                {/* Image Container */}
+
                                 <div className="relative overflow-hidden aspect-video bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900">
                                     <motion.div
                                         whileHover={{ scale: 1.05 }}
                                         transition={{ duration: 0.4, ease: "easeOut" }}
                                         className="w-full h-full"
                                     >
-                                        <Image 
-                                            src={bgImage} 
+                                        <Image
+                                            src={bgImage}
                                             alt={title}
                                             className="w-full h-full object-cover"
                                         />
                                     </motion.div>
-                                    
-                                    {/* Overlay on Hover */}
+
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                                    
-                                    {/* Quick Links Overlay */}
+
                                     <div className="absolute inset-0 flex items-center justify-center gap-3 opacity-0 group-hover:opacity-100 transition-all duration-300">
-                                        <Link 
+                                        <Link
                                             href={githubLink}
                                             target="_blank"
                                             className="flex items-center gap-2 px-4 py-2 bg-white dark:bg-gray-900 text-gray-900 dark:text-white rounded-lg hover:scale-105 transition-transform shadow-lg"
@@ -114,7 +110,7 @@ const Projects = () => {
                                             <FaGithub size={16} />
                                             <span className="text-sm font-medium">Code</span>
                                         </Link>
-                                        <Link 
+                                        <Link
                                             href={liveLink}
                                             target="_blank"
                                             className="flex items-center gap-2 px-4 py-2 bg-purple-600 text-white rounded-lg hover:scale-105 transition-transform shadow-lg"
@@ -125,7 +121,6 @@ const Projects = () => {
                                     </div>
                                 </div>
 
-                                {/* Content */}
                                 <div className="p-6 space-y-4">
                                     <div className="space-y-2">
                                         <h3 className="text-xl font-semibold text-gray-900 dark:text-white group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors">
@@ -136,9 +131,8 @@ const Projects = () => {
                                         </p>
                                     </div>
 
-                                    {/* Bottom Links */}
                                     <div className="flex items-center justify-between pt-4 border-t border-gray-200 dark:border-gray-800">
-                                        <Link 
+                                        <Link
                                             href={githubLink}
                                             target="_blank"
                                             className="flex items-center gap-1.5 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
@@ -146,7 +140,7 @@ const Projects = () => {
                                             <FaGithub size={14} />
                                             <span>GitHub</span>
                                         </Link>
-                                        <Link 
+                                        <Link
                                             href={liveLink}
                                             target="_blank"
                                             className="flex items-center gap-1.5 text-sm text-purple-600 dark:text-purple-400 hover:text-purple-700 dark:hover:text-purple-300 transition-colors font-medium"
@@ -157,7 +151,6 @@ const Projects = () => {
                                     </div>
                                 </div>
 
-                                {/* Decorative Corner Element */}
                                 <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-purple-500/10 to-transparent dark:from-purple-500/20 rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                             </div>
                         </motion.div>

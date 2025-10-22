@@ -37,7 +37,6 @@ export function ProfileUpdateTime({
 
     setTimeAgo(calculateTimeAgo())
 
-    // Update every minute
     const interval = setInterval(() => {
       setTimeAgo(calculateTimeAgo())
     }, 60000)
