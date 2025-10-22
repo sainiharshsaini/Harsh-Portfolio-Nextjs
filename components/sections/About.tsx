@@ -1,11 +1,12 @@
+import React from 'react'
 import { motion } from "motion/react"
-import { Tilt } from "../motion-primitives/tilt"
-import FeaturesCards from "./features-card";
-import { Button } from "../ui/button";
+import { Tilt } from '../motion-primitives/tilt'
+import { Button } from '../ui/button'
+import FeaturesCards from './features-card'
 
-const About = () => {
-    return (
-        <div className="flex flex-col gap-24 md:gap-32 justify-between max-w-7xl mx-auto mb-16">
+const AboutSection = () => {
+  return (
+    <div className="flex flex-col gap-24 md:gap-32 justify-between max-w-7xl mx-auto mb-16">
             <Tilt rotationFactor={8} isRevese>
                 <motion.div
                     initial={{ opacity: 0 }}
@@ -71,7 +72,7 @@ const About = () => {
 
             <FeaturesCards />
         </div>
-    )
+  )
 }
 
-export default About
+export default AboutSection

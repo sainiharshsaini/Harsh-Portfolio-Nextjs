@@ -5,10 +5,10 @@ import bgCoverImg from "@/images/profile-bg-cover.jpg"
 import ThemeModeToggle from '@/components/shared/theme-mode-toggle'
 import { BorderTrail } from '../motion-primitives/border-trail'
 import { ProfileUpdateTime } from './profile-update-time'
-import About from './about'
 import { ResumeCard } from './resume-card'
 import { motion } from "motion/react";
 import { Mail, MapPin } from 'lucide-react'
+import AboutSection from './about'
 
 const HeroSection = () => {
     return (
@@ -116,7 +116,7 @@ const HeroSection = () => {
                     </motion.div>
                     <ResumeCard />
                 </div>
-                <About />
+                <AboutSection/>
             </div>
         </div>
     )
