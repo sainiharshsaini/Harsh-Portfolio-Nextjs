@@ -5,8 +5,8 @@ import { Button } from '../ui/button'
 import FeaturesCards from './features-card'
 
 const AboutSection = () => {
-  return (
-    <div className="flex flex-col gap-24 md:gap-32 justify-between max-w-7xl mx-auto mb-16">
+    return (
+        <div className="flex flex-col gap-24 md:gap-32 justify-between max-w-7xl mx-auto mb-16">
             <Tilt rotationFactor={8} isRevese>
                 <motion.div
                     initial={{ opacity: 0 }}
@@ -72,7 +72,7 @@ const AboutSection = () => {
 
             <FeaturesCards />
         </div>
-  )
+    )
 }
 
 export default AboutSection
