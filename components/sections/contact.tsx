@@ -1,3 +1,5 @@
+"use client"
+
 import { FormEvent, useState } from "react";
 import { motion } from "motion/react";
 import { TextMorph } from "../motion-primitives/text-morph";
