@@ -8,7 +8,7 @@ import { ProfileUpdateTime } from './profile-update-time'
 import { ResumeCard } from './resume-card'
 import { motion } from "motion/react";
 import { Mail, MapPin } from 'lucide-react'
-import { About } from './about'
+import { About } from '@/components/sections/about'
 
 const HeroSection = () => {
     return (
