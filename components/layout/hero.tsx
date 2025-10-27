@@ -1,16 +1,15 @@
-import React from 'react'
 import Image from 'next/image'
-import profileImg from "@/images/profile-img.png"
-import bgCoverImg from "@/images/profile-bg-cover.jpg"
+import profileImg from "@/public/images/profile-img.png"
+import bgCoverImg from "@/public/images/profile-bg-cover.jpg"
 import ThemeModeToggle from '@/components/shared/theme-mode-toggle'
 import { BorderTrail } from '../motion-primitives/border-trail'
-import { ProfileUpdateTime } from './profile-update-time'
-import { ResumeCard } from './resume-card'
+import { ProfileUpdateTime } from '../sections/profile-update-time'
+import { ResumeCard } from '../sections/resume-card'
 import { motion } from "motion/react";
 import { Mail, MapPin } from 'lucide-react'
-import { About } from '@/components/sections/about'
+import About from '../sections/about'
 
-const HeroSection = () => {
+const Hero = () => {
     return (
         <div className="relative w-full mx-auto overflow-hidden">
             <Image
@@ -122,4 +121,4 @@ const HeroSection = () => {
     )
 }
 
-export default HeroSection
+export default Hero

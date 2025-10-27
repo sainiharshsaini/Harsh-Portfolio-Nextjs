@@ -27,7 +27,7 @@ const TechStack = () => {
     return (
         <section id="skills" className="relative flex flex-col gap-16 w-full py-16 md:py-24 overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-b from-transparent via-blue-50/30 to-transparent dark:via-blue-950/20" />
-            
+
             <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                 <motion.div
                     initial={{ opacity: 0, y: -20 }}
@@ -75,13 +75,13 @@ const TechStack = () => {
                                         <div className="flex items-center gap-2 px-3 py-2 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-blue-400 dark:hover:border-blue-600 hover:shadow-md hover:shadow-blue-500/10 dark:hover:shadow-blue-500/20 transition-all duration-300 cursor-pointer">
 
                                             <div className="w-5 h-5 flex items-center justify-center">
-                                                <Image 
-                                                    src={imgLink} 
+                                                <Image
+                                                    src={imgLink}
                                                     alt={imgName}
                                                     className="w-full h-full object-contain"
                                                 />
                                             </div>
-                                            
+
                                             <span className="text-sm font-medium text-gray-700 dark:text-gray-300 group-hover:text-gray-900 dark:group-hover:text-white transition-colors">
                                                 {imgName}
                                             </span>
@@ -94,7 +94,7 @@ const TechStack = () => {
                 </div>
             </div>
 
-            <ServicesCards/>
+            <ServicesCards />
         </section>
     )
 }
