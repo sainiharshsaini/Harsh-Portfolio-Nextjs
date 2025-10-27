@@ -8,7 +8,7 @@ import { ProfileUpdateTime } from './profile-update-time'
 import { ResumeCard } from './resume-card'
 import { motion } from "motion/react";
 import { Mail, MapPin } from 'lucide-react'
-import AboutSection from './about'
+import { About } from './about'
 
 const HeroSection = () => {
     return (
@@ -116,7 +116,7 @@ const HeroSection = () => {
                     </motion.div>
                     <ResumeCard />
                 </div>
-                <AboutSection/>
+                <About />
             </div>
         </div>
     )

@@ -4,7 +4,7 @@ import { Tilt } from '../motion-primitives/tilt'
 import { Button } from '../ui/button'
 import FeaturesCards from './features-card'
 
-const AboutSection = () => {
+export const About = () => {
     return (
         <div className="flex flex-col gap-24 md:gap-32 justify-between max-w-7xl mx-auto mb-16">
             <Tilt rotationFactor={8} isRevese>
@@ -74,5 +74,3 @@ const AboutSection = () => {
         </div>
     )
 }
-
-export default AboutSection
