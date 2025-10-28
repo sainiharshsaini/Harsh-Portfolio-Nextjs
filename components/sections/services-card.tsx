@@ -53,7 +53,7 @@ const ServicesCards = () => {
                     whileInView={{ opacity: 1 }}
                     transition={{ duration: 0.5, delay: 0.7 }}
                     viewport={{ once: true }}
-                    className="text-center max-w-2xl mx-auto mt-4 md:mt-5 mb-8 md:mb-12 text-sm sm:text-base text-muted-foreground px-4"
+                    className="text-center max-w-2xl mx-auto mt-4 md:mt-5 mb-8 md:mb-12 text-muted-foreground px-4"
                 >
                     I develop end-to-end web solutions that are fast, reliable, and
                     user-focused. From frontend interfaces to backend logic and cloud

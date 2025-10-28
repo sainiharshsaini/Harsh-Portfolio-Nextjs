@@ -28,7 +28,7 @@ const TechStack = () => {
         <section id="skills" className="relative flex flex-col gap-16 w-full py-16 md:py-24 overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-b from-transparent via-blue-50/30 to-transparent dark:via-blue-950/20" />
 
-            <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="relative max-w-6xl mx-auto md:px-4 lg:px-8">
                 <motion.div
                     initial={{ opacity: 0, y: -20 }}
                     whileInView={{ opacity: 1, y: 0 }}

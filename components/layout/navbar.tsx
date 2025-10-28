@@ -36,7 +36,7 @@ const Navbar = () => {
       transition={{ duration: 0.6, ease: 'easeOut' }}
       className='sticky top-0 z-50 w-full'
     >
-      <div className='container mx-auto max-w-3xl px-3 sm:px-4 py-3'>
+      <div className='container mx-auto max-w-3xl px-2 py-3'>
         <div className='inline-flex w-full items-center justify-around rounded-lg border bg-card/50 backdrop-blur-sm p-1.5 sm:p-2 shadow-sm'>
           {TABS.map((tab) => {
             const Icon = tab.icon;

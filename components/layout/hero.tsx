@@ -11,7 +11,7 @@ import About from '../sections/About'
 
 const Hero = () => {
     return (
-        <div className="relative w-full mx-auto overflow-hidden">
+        <section id='home' className="relative w-full mx-auto overflow-hidden">
             <Image
                 className="h-32 sm:h-40 md:h-48 w-full object-cover"
                 src={bgCoverImg}
@@ -117,7 +117,7 @@ const Hero = () => {
                 </div>
                 <About />
             </div>
-        </div>
+        </section>
     )
 }
 

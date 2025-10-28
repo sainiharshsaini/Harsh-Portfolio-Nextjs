@@ -3,6 +3,8 @@ import { motion } from "motion/react"
 import { Tilt } from '../motion-primitives/tilt'
 import { Button } from '../ui/button'
 import FeaturesCards from './features-card'
+import Link from 'next/link'
+import { Magnetic } from '../motion-primitives/magnetic'
 
 const About = () => {
     return (
@@ -16,9 +18,9 @@ const About = () => {
                     id="about"
                     className="relative flex max-w-full p-8 lg:p-12 flex-col shadow-lg rounded-2xl overflow-hidden border border-border bg-card"
                 >
-                    <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-purple-500/5 opacity-50" />
+                    <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5 opacity-50" />
                     <div className="absolute -top-24 -right-24 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-pulse" />
-                    <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
+                    <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-accent/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
 
                     <div className="relative z-10">
                         <motion.div
@@ -54,16 +56,25 @@ const About = () => {
                                 whileInView={{ opacity: 1, scale: 1 }}
                                 transition={{ duration: 0.5, delay: 0.6 }}
                                 viewport={{ once: true }}
-                                className="mt-8 p-6 rounded-xl bg-primary/5 border border-primary/20"
+                                className="flex flex-col gap-4 justify-between p-4 md:p-6 rounded-xl bg-primary/5 border border-primary/20"
                             >
                                 <p className="text-base leading-relaxed text-foreground">
                                     💼 I&apos;m open to <span className="font-semibold text-primary">job opportunities</span> where I can contribute, learn and grow.
                                     If you have a good opportunity that matches my skills and experience, don&apos;t hesitate to contact me.
                                 </p>
-                                <Button className="mt-4 px-6 py-3 rounded-lg bg-primary text-primary-foreground font-medium shadow-lg hover:shadow-xl transition-shadow"
-                                >
-                                    Get In Touch
-                                </Button>
+                                <div className='flex justify-end items-center'>
+                                    <Magnetic>
+                                        <Button
+                                            type='button'
+                                            className='inline-flex items-center rounded-md border border-border bg-secondary px-4 py-2 text-sm text-secondary-foreground transition-all duration-300 hover:bg-accent hover:text-accent-foreground'
+                                        >
+                                            <Link href={"#contact"}>
+                                                Get In Touch
+                                            </Link>
+                                        </Button>
+                                    </Magnetic>
+                                </div>
+
                             </motion.div>
                         </motion.div>
                     </div>

@@ -8,6 +8,7 @@ import {
   useTransform,
   type SpringOptions,
   AnimatePresence,
+  motionValue,
 } from 'motion/react';
 import {
   Children,
@@ -50,7 +51,7 @@ export type DockIconProps = {
   className?: string;
   children: React.ReactNode;
   width?: MotionValue<number>;
-  isHovered?: MotionValue<number>;
+  ishovered?: MotionValue<number>;
 };
 
 export type DocContextType = {
@@ -88,13 +89,13 @@ function Dock({
   panelHeight = DEFAULT_PANEL_HEIGHT,
 }: DockProps) {
   const mouseX = useMotionValue(Infinity);
-  const isHovered = useMotionValue(0);
+  const ishovered = useMotionValue(0);
 
   const maxHeight = useMemo(() => {
     return Math.max(DOCK_HEIGHT, magnification + magnification / 2 + 4);
   }, [magnification]);
 
-  const heightRow = useTransform(isHovered, [0, 1], [panelHeight, maxHeight]);
+  const heightRow = useTransform(ishovered, [0, 1], [panelHeight, maxHeight]);
   const height = useSpring(heightRow, spring);
 
   return (
@@ -107,11 +108,11 @@ function Dock({
     >
       <motion.div
         onMouseMove={({ pageX }) => {
-          isHovered.set(1);
+          ishovered.set(1);
           mouseX.set(pageX);
         }}
         onMouseLeave={() => {
-          isHovered.set(0);
+          ishovered.set(0);
           mouseX.set(Infinity);
         }}
         className={cn(
@@ -135,7 +136,7 @@ function DockItem({ children, className, onClick }: DockItemProps) {
 
   const { distance, magnification, mouseX, spring } = useDock();
 
-  const isHovered = useMotionValue(0);
+  const ishovered = useMotionValue(0);
 
   const mouseDistance = useTransform(mouseX, (val) => {
     const domRect = ref.current?.getBoundingClientRect() ?? { x: 0, width: 0 };
@@ -154,10 +155,10 @@ function DockItem({ children, className, onClick }: DockItemProps) {
     <motion.div
       ref={ref}
       style={{ width }}
-      onHoverStart={() => isHovered.set(1)}
-      onHoverEnd={() => isHovered.set(0)}
-      onFocus={() => isHovered.set(1)}
-      onBlur={() => isHovered.set(0)}
+      onHoverStart={() => ishovered.set(1)}
+      onHoverEnd={() => ishovered.set(0)}
+      onFocus={() => ishovered.set(1)}
+      onBlur={() => ishovered.set(0)}
       className={cn(
         'relative inline-flex items-center justify-center',
         className
@@ -168,7 +169,7 @@ function DockItem({ children, className, onClick }: DockItemProps) {
       onClick={onClick}
     >
       {Children.map(children, (child) =>
-        cloneElement(child as React.ReactElement<DockIconProps>, { width, isHovered })
+        cloneElement(child as React.ReactElement<DockIconProps>, { width, ishovered })
       )}
     </motion.div>
   );
@@ -176,16 +177,16 @@ function DockItem({ children, className, onClick }: DockItemProps) {
 
 function DockLabel({ children, className, ...rest }: DockLabelProps) {
   const restProps = rest as Record<string, unknown>;
-  const isHovered = restProps['isHovered'] as MotionValue<number>;
+  const ishovered = restProps['ishovered'] as MotionValue<number>;
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    const unsubscribe = isHovered.on('change', (latest) => {
+    const unsubscribe = ishovered.on('change', (latest) => {
       setIsVisible(latest === 1);
     });
 
     return () => unsubscribe();
-  }, [isHovered]);
+  }, [ishovered]);
 
   return (
     <AnimatePresence>
@@ -213,7 +214,7 @@ function DockIcon({ children, className, ...rest }: DockIconProps) {
   const restProps = rest as Record<string, unknown>;
   const width = restProps['width'] as MotionValue<number>;
 
-  const widthTransform = useTransform(width, (val) => val / 2);
+  const widthTransform = useTransform(width || motionValue(0), (val) => val / 2);
 
   return (
     <motion.div

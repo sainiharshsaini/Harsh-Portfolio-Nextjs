@@ -33,8 +33,7 @@ const Projects = () => {
             <div className="absolute top-1/3 left-1/4 w-64 h-64 bg-purple-300/20 dark:bg-purple-600/10 rounded-full blur-3xl" />
             <div className="absolute bottom-1/3 right-1/4 w-64 h-64 bg-blue-300/20 dark:bg-blue-600/10 rounded-full blur-3xl" />
 
-            <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
+            <div className="relative max-w-7xl mx-auto md:px-4 lg:px-8">
                 <motion.div
                     initial={{ opacity: 0, y: -20 }}
                     whileInView={{ opacity: 1, y: 0 }}

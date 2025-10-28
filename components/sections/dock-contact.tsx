@@ -1,4 +1,5 @@
 import { Dock, DockIcon, DockItem, DockLabel } from '../motion-primitives/dock';
+import Link from 'next/link';
 
 const socialLinks = [
     {
@@ -38,23 +39,25 @@ const socialLinks = [
     },
 ];
 
-
 export function DockContact() {
     return (
         <div className="relative mt-16 sm:mt-20">
             <div className='absolute bottom-2 left-1/2 max-w-full -translate-x-1/2'>
                 <Dock className='items-end pb-3'>
                     {socialLinks.map((item, idx) => (
-                        <DockItem
+                        <Link
                             key={idx}
-                            className='aspect-square rounded-full bg-gray-200 dark:bg-neutral-800'
+                            href={item.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
                         >
-                            <DockLabel>{item.title}</DockLabel>
-                            <DockIcon>{item.icon}</DockIcon>
-                            {/* <Link href={item.href} target="_blank" rel="noopener noreferrer">
-                                            <DockIcon>{item.icon}</DockIcon>
-                                        </Link> */}
-                        </DockItem>
+                            <DockItem
+                                className='aspect-square cursor-pointer rounded-full bg-gray-200 dark:bg-neutral-800'
+                            >
+                                <DockLabel>{item.title}</DockLabel>
+                                <DockIcon>{item.icon}</DockIcon>
+                            </DockItem>
+                        </Link>
                     ))}
                 </Dock>
             </div>
