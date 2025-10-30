@@ -114,7 +114,6 @@ const Contact = () => {
                         }}
                     >
                         <GlowEffect
-                            colors={["#0894FF", "#C959DD", "#FF2E54", "#FF9004"]}
                             mode="rotate"
                             blur="softest"
                             duration={4}
@@ -165,7 +164,6 @@ const Contact = () => {
                     className="relative w-full"
                 >
                     <GlowEffect
-                        colors={["#FF5733", "#33FF57", "#3357FF", "#F1C40F"]}
                         mode="colorShift"
                         blur="soft"
                         duration={3}

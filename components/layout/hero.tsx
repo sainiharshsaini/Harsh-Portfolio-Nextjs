@@ -34,7 +34,7 @@ const Hero = () => {
                                 transition={{ duration: 0.3 }}
                             >
                                 <BorderTrail
-                                    className='bg-gradient-to-l from-blue-200 via-blue-500 to-blue-200 dark:from-blue-400 dark:via-blue-500 dark:to-blue-700'
+                                    className='bg-gradient-to-l from-primary/20 via-primary to-primary/20'
                                     size={120}
                                 />
 
@@ -55,7 +55,7 @@ const Hero = () => {
                             >
                                 <h2 className="flex items-center gap-1 text-xl md:text-2xl lg:text-4xl font-bold font-sans text-foreground">
                                     Harsh Saini
-                                    <span className="text-blue-500">
+                                    <span className="text-primary">
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
                                             width="20"
@@ -108,7 +108,7 @@ const Hero = () => {
 
                         <div className='pl-2 pt-1'>
                             <ProfileUpdateTime
-                                lastUpdated={new Date('2025-10-08')}
+                                lastUpdated={new Date('2025-10-30')}
                                 className="text-xs md:text-sm"
                             />
                         </div>

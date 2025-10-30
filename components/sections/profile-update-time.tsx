@@ -45,7 +45,7 @@ export function ProfileUpdateTime({
   }, [lastUpdated])
 
   return (
-    <div className={`text-sm text-gray-500 dark:text-gray-400 ${className}`}>
+    <div className={`text-sm text-muted-foreground ${className}`}>
       Profile last updated - {timeAgo}
     </div>
   )
