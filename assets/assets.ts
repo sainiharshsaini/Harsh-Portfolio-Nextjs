@@ -16,6 +16,8 @@ import framer from './tech-stack-icons/framer.png'
 import shadcn from './tech-stack-icons/shadcn.svg'
 
 import portfolioNextjsImg from './projectImages/portfolioNextjs.png'
+import expenseHeroImg from './projectImages/expenseHero.png'
+import pixelPayImg from './projectImages/pixelPay.png'
 
 export const tech_stack_icons = {
     mongoose,
@@ -74,27 +76,27 @@ export const techStackData = [
 
 export const projectsData = [
     {
-        title: 'My Portfolio using Nextjs',
-        description: 'A personal portfolio built using Next.js to showcase my work, skills, and experience as a full-stack web developer.',
-        bgImage: portfolioNextjsImg,
-        techUsed: [{ icon: next }, { icon: tailwindcss }, { icon: react }, { icon: typescript }, { icon: framer },],
-        githubLink: 'https://github.com/sainiharshsaini/Harsh-Portfolio-Nextjs',
-        liveLink: 'https://www.harshsaini.tech/'
-    },
-    {
         title: 'ExpenseHero',
-        description: 'A simple personal finance app to track daily expenses and control your budget easily.',
-        bgImage: portfolioNextjsImg,
+        description: 'Smart expense tracking web app that helps users easily manage their daily spending, set budgets, and view real-time insights through a clean and interactive dashboard. It simplifies personal finance management and makes money tracking effortless.',
+        bgImage: expenseHeroImg,
         techUsed: [{ icon: react }, { icon: tailwindcss }],
         githubLink: 'https://github.com/sainiharshsaini/Expense-Hero',
         liveLink: 'https://expensehero.vercel.app/'
     },
     {
         title: 'PixelPay',
-        description: 'A finance wallet like paytm.',
-        bgImage: portfolioNextjsImg,
+        description: 'Digital payment web app that enables seamless and secure online transactions. It features an intuitive UI, real-time payment tracking, and smooth user authentication, designed to deliver a fast and reliable payment experience.',
+        bgImage: pixelPayImg,
         techUsed: [{ icon: react }, { icon: tailwindcss }],
         githubLink: 'https://github.com/sainiharshsaini/PixelPay',
         liveLink: ''
-    }
+    },
+    {
+        title: 'My Portfolio',
+        description: 'My portfolio built to showcase my work, skills, and experience as a full-stack web developer.',
+        bgImage: portfolioNextjsImg,
+        techUsed: [{ icon: next }, { icon: tailwindcss }, { icon: react }, { icon: typescript }, { icon: framer },],
+        githubLink: 'https://github.com/sainiharshsaini/Harsh-Portfolio-Nextjs',
+        liveLink: 'https://harshsaini.vercel.app/'
+    },
 ]

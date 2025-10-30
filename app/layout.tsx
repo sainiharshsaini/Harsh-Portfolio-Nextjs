@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "Harsh - Portfolio",
   description: "Harsh Portfolio using Nextjs",
   icons: {
-    icon: '/profile-img.png'
+    icon: "/favicon.ico"
   }
 };
 

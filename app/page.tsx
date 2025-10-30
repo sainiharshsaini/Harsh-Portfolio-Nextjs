@@ -12,7 +12,7 @@ export default function Home() {
   const navRef = useRef(null);
 
   return (
-    <div className="relative">
+    <div className="relative w-full">
       <Hero />
 
       <div className="sticky top-0 z-50 m-4" ref={navRef}>
