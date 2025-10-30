@@ -26,27 +26,30 @@ const Inputbox = [
 const Contact = () => {
     const [result, setResult] = useState<string>("");
     const [isSubmitting, setIsSubmitting] = useState(false);
+    const [formData, setFormData] = useState({ name: "", email: "", message: "" });
 
     const onSubmit = async (event: FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         setIsSubmitting(true);
         setResult("Sending....");
-        const formData = new FormData(event.currentTarget);
-
-        formData.append("access_key", "0e47333c-c3a5-4474-b384-00e5269ef54f");
+        const submitFormData = new FormData();
+        submitFormData.append("name", formData.name);
+        submitFormData.append("email", formData.email);
+        submitFormData.append("message", formData.message);
+        submitFormData.append("access_key", "0e47333c-c3a5-4474-b384-00e5269ef54f");
 
         const response = await fetch("https://api.web3forms.com/submit", {
             method: "POST",
-            body: formData
+            body: submitFormData
         });
 
         const data = await response.json();
 
         if (data.success) {
             setResult("Form Submitted Successfully");
-            event.currentTarget.reset();
+            setIsSubmitting(false);
+            setFormData({ name: "", email: "", message: "" }); // controlled reset
             setTimeout(() => {
-                setIsSubmitting(false);
                 setResult("");
             }, 3000);
         } else {
@@ -131,6 +134,8 @@ const Contact = () => {
                                 placeholder={i.placeholder}
                                 name={i.name}
                                 required
+                                value={formData[i.name as keyof typeof formData]}
+                                onChange={e => setFormData({ ...formData, [i.name]: e.target.value })}
                                 className="relative w-full p-3 sm:p-4 outline-none border border-input rounded-md bg-background text-foreground placeholder:text-muted-foreground focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 transition-all"
                             />
                         </motion.div>
@@ -146,6 +151,8 @@ const Contact = () => {
                             placeholder="Enter your message"
                             name="message"
                             required
+                            value={formData.message}
+                            onChange={e => setFormData({ ...formData, message: e.target.value })}
                             className="relative w-full overflow-hidden min-h-48 p-3 sm:p-4 outline-none border border-input rounded-md bg-background text-foreground placeholder:text-muted-foreground focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 transition-all"
                         />
                     </motion.div>

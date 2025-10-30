@@ -1,88 +1,100 @@
-import user_image from './user-image.png';
-import code_icon from './code-icon.png';
-import code_icon_dark from './code-icon-dark.png';
-import edu_icon from './edu-icon.png';
-import edu_icon_dark from './edu-icon-dark.png';
-import project_icon from './project-icon.png';
-import project_icon_dark from './project-icon-dark.png';
-import right_arrow_white from './right-arrow-white.png';
-import logo from './logo.jpg';
-import logo_dark from './logo-dark.jpg';
-import mail_icon from './mail_icon.png';
-import mail_icon_dark from './mail_icon_dark.png';
-import profile_img from './profile-img.png';
-import download_icon from './download-icon.png';
-import hand_icon from './hand-icon.png';
-import header_bg_color from './header-bg-color.png';
-import moon_icon from './moon_icon.png';
-import sun_icon from './sun_icon.png';
-import arrow_icon from './arrow-icon.png';
-import arrow_icon_dark from './arrow-icon-dark.png';
-import menu_black from './menu-black.png';
-import menu_white from './menu-white.png';
-import close_black from './close-black.png';
-import close_white from './close-white.png';
-import mobile_icon from './mobile-icon.png';
-import right_arrow from './right-arrow.png';
-import send_icon from './send-icon.png';
-import right_arrow_bold from './right-arrow-bold.png';
-import right_arrow_bold_dark from './right-arrow-bold-dark.png';
-import twitter_light from './x-twitter-light.svg'
-import twitter_dark from './x-twitter-dark.svg'
-import linked_light from './linkedin-light.svg'
-import linkedin_dark from './linkedin-dark.svg'
-import github_light from './github-light.svg'
-import github_dark from './github-dark.svg'
-import web_dev from './web-dev.png'
-import devOps from './devOps.png'
-import activeIcon from './circle.png'
-import india from './india.png'
-import live from './live.png'
+import cpp from './tech-stack-icons/c++.png'
+import express from './tech-stack-icons/express.png'
+import javascript from './tech-stack-icons/javascript.png'
+import mongodb from './tech-stack-icons/mongodb.png'
+import node from './tech-stack-icons/node.png'
+import python from './tech-stack-icons/python.png'
+import react from './tech-stack-icons/react.svg'
+import tailwindcss from './tech-stack-icons/tailwindcss.png'
+import typescript from './tech-stack-icons/typescript.png'
+import mongoose from './tech-stack-icons/mongoose.png'
+import turborepo from './tech-stack-icons/turborepo.svg'
+import postgresql from './tech-stack-icons/postgresql.png'
+import next from './tech-stack-icons/nextjs.png'
+import prisma from './tech-stack-icons/prisma.png'
+import framer from './tech-stack-icons/framer.png'
+import shadcn from './tech-stack-icons/shadcn.svg'
 
-export const assets = {
-    live,
-    india,
-    activeIcon,
-    web_dev,
-    devOps,
-    github_light,
-    github_dark,
-    linked_light,
-    linkedin_dark,
-    twitter_light,
-    twitter_dark,
-    user_image,
-    code_icon,
-    code_icon_dark,
-    edu_icon,
-    edu_icon_dark,
-    project_icon,
-    project_icon_dark,
-    right_arrow_white,
-    logo,
-    logo_dark,
-    mail_icon,
-    mail_icon_dark,
-    profile_img,
-    download_icon,
-    hand_icon,
-    header_bg_color,
-    moon_icon,
-    sun_icon,
-    arrow_icon,
-    arrow_icon_dark,
-    menu_black,
-    menu_white,
-    close_black,
-    close_white,
-    mobile_icon,
-    right_arrow,
-    send_icon,
-    right_arrow_bold,
-    right_arrow_bold_dark
-};
+import portfolioNextjsImg from './projectImages/portfolioNextjs.png'
 
-export const infoList = [
-    { icon: assets.edu_icon, iconDark: assets.edu_icon_dark, title: 'Education', description: 'B.Tech in Computer Science at COER University, Roorkee' },
-    { icon: assets.project_icon, iconDark: assets.project_icon_dark, title: 'Projects', description: 'Built more than 3 real-world big projects' }
+export const tech_stack_icons = {
+    mongoose,
+    postgresql,
+    turborepo,
+    next,
+    prisma,
+    framer,
+    shadcn,
+    cpp,
+    express,
+    javascript,
+    python,
+    react,
+    tailwindcss,
+    typescript,
+    node,
+    mongodb
+}
+
+export const techStackData = [
+    {
+        techType: 'Languages', techData: [
+            { imgLink: tech_stack_icons.javascript, imgName: "JavaScript" },
+            { imgLink: tech_stack_icons.typescript, imgName: "TypeScript" },
+            { imgLink: tech_stack_icons.cpp, imgName: "C++" },
+            { imgLink: tech_stack_icons.python, imgName: "Python" },
+        ]
+    },
+    {
+        techType: 'Libraries & Frameworks', techData: [
+            { imgLink: tech_stack_icons.react, imgName: "ReactJS" },
+            { imgLink: tech_stack_icons.node, imgName: "NodeJS" },
+            { imgLink: tech_stack_icons.express, imgName: "ExpressJS" },
+            { imgLink: tech_stack_icons.next, imgName: "NextJS" },
+            { imgLink: tech_stack_icons.tailwindcss, imgName: "TailwindCSS" },
+            { imgLink: tech_stack_icons.shadcn, imgName: "Shadcn/ui" },
+            { imgLink: tech_stack_icons.framer, imgName: "Framer" },
+            { imgLink: tech_stack_icons.turborepo, imgName: "Turborepo" }
+        ]
+    },
+    {
+        techType: 'Databases & ORMs', techData: [
+            { imgLink: tech_stack_icons.mongodb, imgName: "MongoDB" },
+            { imgLink: tech_stack_icons.mongoose, imgName: "Mongoose" },
+            { imgLink: tech_stack_icons.postgresql, imgName: "PostgreSQL" },
+            { imgLink: tech_stack_icons.prisma, imgName: "Prisma" }
+        ]
+    },
+    {
+        techType: 'Tools & Technologies', techData: [
+            { imgLink: tech_stack_icons.express, imgName: "REST API" },
+        ]
+    },
 ];
+
+export const projectsData = [
+    {
+        title: 'My Portfolio using Nextjs',
+        description: 'A personal portfolio built using Next.js to showcase my work, skills, and experience as a full-stack web developer.',
+        bgImage: portfolioNextjsImg,
+        techUsed: [{ icon: next }, { icon: tailwindcss }, { icon: react }, { icon: typescript }, { icon: framer },],
+        githubLink: 'https://github.com/sainiharshsaini/Harsh-Portfolio-Nextjs',
+        liveLink: 'https://www.harshsaini.tech/'
+    },
+    {
+        title: 'ExpenseHero',
+        description: 'A simple personal finance app to track daily expenses and control your budget easily.',
+        bgImage: portfolioNextjsImg,
+        techUsed: [{ icon: react }, { icon: tailwindcss }],
+        githubLink: 'https://github.com/sainiharshsaini/Expense-Hero',
+        liveLink: 'https://expensehero.vercel.app/'
+    },
+    {
+        title: 'PixelPay',
+        description: 'A finance wallet like paytm.',
+        bgImage: portfolioNextjsImg,
+        techUsed: [{ icon: react }, { icon: tailwindcss }],
+        githubLink: 'https://github.com/sainiharshsaini/PixelPay',
+        liveLink: ''
+    }
+]

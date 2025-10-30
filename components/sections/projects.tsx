@@ -1,4 +1,4 @@
-import { projectsData } from "@/assets/tech-stack-icons/tech-stack"
+import { projectsData } from "@/assets/assets"
 
 import Image from "next/image"
 import Link from "next/link"
