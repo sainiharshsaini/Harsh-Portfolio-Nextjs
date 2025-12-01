@@ -1,4 +1,3 @@
-import cpp from './tech-stack-icons/c++.png'
 import express from './tech-stack-icons/express.png'
 import javascript from './tech-stack-icons/javascript.png'
 import mongodb from './tech-stack-icons/mongodb.png'
@@ -14,8 +13,11 @@ import next from './tech-stack-icons/nextjs.png'
 import prisma from './tech-stack-icons/prisma.png'
 import framer from './tech-stack-icons/framer.png'
 import shadcn from './tech-stack-icons/shadcn.svg'
+import docker from './tech-stack-icons/Docker.png'
+import aws from './tech-stack-icons/aws.png'
+import kubernetes from './tech-stack-icons/Kubernetes.svg'
+import gitHubActions from './tech-stack-icons/GitHub-Actions.png'
 
-import portfolioNextjsImg from './projectImages/portfolioNextjs.png'
 import expenseHeroImg from './projectImages/expenseHero.png'
 import pixelPayImg from './projectImages/pixelPay.png'
 
@@ -27,7 +29,6 @@ export const tech_stack_icons = {
     prisma,
     framer,
     shadcn,
-    cpp,
     express,
     javascript,
     python,
@@ -35,7 +36,11 @@ export const tech_stack_icons = {
     tailwindcss,
     typescript,
     node,
-    mongodb
+    mongodb,
+    docker,
+    aws,
+    kubernetes,
+    gitHubActions
 }
 
 export const techStackData = [
@@ -43,7 +48,6 @@ export const techStackData = [
         techType: 'Languages', techData: [
             { imgLink: tech_stack_icons.javascript, imgName: "JavaScript" },
             { imgLink: tech_stack_icons.typescript, imgName: "TypeScript" },
-            { imgLink: tech_stack_icons.cpp, imgName: "C++" },
             { imgLink: tech_stack_icons.python, imgName: "Python" },
         ]
     },
@@ -69,7 +73,10 @@ export const techStackData = [
     },
     {
         techType: 'Tools & Technologies', techData: [
-            { imgLink: tech_stack_icons.express, imgName: "REST API" },
+            { imgLink: tech_stack_icons.aws, imgName: "AWS" },
+            { imgLink: tech_stack_icons.gitHubActions, imgName: "GitHub Actions" },
+            { imgLink: tech_stack_icons.docker, imgName: "Docker" },
+            { imgLink: tech_stack_icons.kubernetes, imgName: "Kubernetes" },
         ]
     },
 ];
@@ -90,13 +97,5 @@ export const projectsData = [
         techUsed: [{ icon: react }, { icon: tailwindcss }],
         githubLink: 'https://github.com/sainiharshsaini/PixelPay',
         liveLink: ''
-    },
-    {
-        title: 'My Portfolio',
-        description: 'My portfolio built to showcase my work, skills, and experience as a full-stack web developer.',
-        bgImage: portfolioNextjsImg,
-        techUsed: [{ icon: next }, { icon: tailwindcss }, { icon: react }, { icon: typescript }, { icon: framer },],
-        githubLink: 'https://github.com/sainiharshsaini/Harsh-Portfolio-Nextjs',
-        liveLink: 'https://harshsaini.vercel.app/'
     },
 ]
